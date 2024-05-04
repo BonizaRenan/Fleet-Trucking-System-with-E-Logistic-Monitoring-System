@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: linear-gradient(to right, #a3bded, #95b2e3, #86a7da, #789cd0, #6991c7);
+}
+.container{
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    border-radius: 6px;
+    padding: 30px;
+    margin: 0 15px;
+    background-color: #d9e8ff;
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+.container .backbtn{
+    position: relative;
+    padding:1px 1px 30px;
+    margin-top: -14px;
+}
+.container .backbtn input{
+    height: 30px;
+    width:80px;
+    outline: none;
+    color: #fff;
+    border: none;
+    font-size: 10px;
+    font-weight: 500;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    background-color: gray;
+    cursor: pointer;
+}
+.container .backbtn input:hover{
+    background-color: #413e42;
+
+}
+.container .title{
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+    position: relative;
+   
+}
+.container .title::before{
+    content: '';
+    position: absolute;
+    height: 3px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(108,228,125,1) 0%, rgba(8,26,144,1) 100%);}
+.description{
+    color: black;
+    margin-top: 2vw;
+}
+.description .titledescription{
+    margin-top: 2vw;
+    font-size: 1.5vw;
+    font-weight: bolder;
+}
+.description .Infodescription{
+    margin-top: 0.5vw;
+    text-align: justify;
+}

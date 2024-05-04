@@ -1,0 +1,1510 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif; 
+}
+body{
+    background: linear-gradient(to right, #a3bded, #95b2e3, #86a7da, #789cd0, #6991c7);
+    /* overflow-x: hidden; */
+}
+/* Side Nav Start */
+nav{
+    position: fixed; 
+    height: 117%;
+    background: #ffffff;
+    width: 0;
+    overflow: hidden;
+    transition: all 0.2s linear;
+    box-shadow: 0 20px 35px (0,0,0, 0.1);
+    z-index: 2;
+    width: 0;
+    transition: width 0.3s; /* Optional: to animate the width change */
+}
+/* Open class for navMenu */
+nav.open {
+    width: 200px;
+}
+.logo{
+    display: flex;
+    transition: all 0.5s ease;
+    padding: 1.4vw;
+    width: 100vw;
+    background-color: rgba(23, 108, 255, 0.4); 
+}
+.logo img{
+    width: 50px;
+    height: 50px;
+    border-radius: 10vw;
+}
+.logo span{
+    font-weight: bold;
+    margin-left: 2vw;
+    text-align:left;
+    margin-top: 15px;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: rgb(0, 0, 0);
+}
+.logo span .usertype{
+    text-align: justify;
+    font-size: 6px;
+}
+.nav-align{
+    margin-top: 3vw;
+}
+nav a{
+    display: flex;
+    color: gray;
+    width: 300px;
+    padding: 10px;
+}
+.icon{
+    width: 30px;
+    height: 30px;
+    margin-top: 0.7vw; 
+}
+.nav-item{
+    margin-top: 12px;
+    font-size: 3vw;
+    margin-left: 19px;
+}
+.nav-align a:hover{
+    background-color: aquamarine;
+    width: 60vw;
+}
+/* Side Nav end */
+/* Top Nav Start */
+.TopNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #b3c7e6;
+    padding: 0.5vw;
+}
+.TopNav .nav-icon img {
+    height: 20px;
+    margin-top: 1vw;
+    cursor: pointer;
+}
+.logoname{
+    display: flex;
+    position: absolute;
+    left: 10vw;
+    margin-top: 1vw;
+}
+.logoname img{
+    width: 40px;
+    height: 40px;   
+     /*  */
+     cursor: default;
+     pointer-events: none;
+     /*  */    
+}
+.logoname span{
+    margin-top: 10px;
+    margin-left: 1px;
+    font-size: 15px;
+    font-weight: 600;
+    font-style: oblique;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+     /*  */
+     cursor: default;
+     pointer-events: none;
+     /*  */    
+}
+.Selection{
+    display: flex;
+    position: absolute;
+    list-style-type: none;
+    right: 6vw;
+    margin-top: 1px;
+}
+.Selection li a{
+    position: relative;
+    font-size: 10px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 5vw;
+    text-transform: uppercase;  
+}
+.Selection li a:after{
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: rgb(0, 0, 0);
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+.Selection li a:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+/* Nav End */
+
+/* Add account start */
+.addacc{
+    position: absolute;
+    left: 2%;
+    top: 7.5%;
+    /* margin-bottom: 1vw; */
+    font-size: 2px;
+    z-index: -1;
+}
+.addacc input{
+    height: 20px;
+    width: 100%;
+    outline: none;
+    color: #fff;
+    border: none;
+    font-size: 10px;
+    font-weight: 500;
+    border-radius: 1px;
+    letter-spacing: 1px;
+    background-color: gray;
+    cursor: pointer;
+}
+.Search{
+    position: absolute;
+    top: 7%;
+    right: 5%;
+    margin-bottom: 1vw;
+    z-index: -1;
+}
+.Search .Search_btn{
+    height: 20px;
+    width: 15vw;
+    outline: none;
+    color: #fff;
+    border: none;
+    font-size: 10px;
+    font-weight: 500;
+    border-radius: 2px;
+    letter-spacing: 1px;
+    background-color: gray;
+    cursor: pointer;
+}
+.Search .Search_Input{
+    height: 20px;
+    width: 30vw;
+    font-size: 10px;
+}
+.Add_Popup{
+    position: absolute;
+    top: 12%;
+    left:2%;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.Add_Popup .add_form form{
+    height: auto;  /* or whatever height you desire */
+    width: 98%;
+    background-color: #d9e8ff !important;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+.Add_Popup .add_form .Iconclose img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    z-index: 1;
+}
+.Add_Popup .add_form form .title-register{
+    position: relative;
+    margin-top: 1vw;
+    margin-left: 0.3vw;
+    margin-right: 0.3vw;
+    font-size: 20px;
+    font-weight: bold;
+}
+.Add_Popup .add_form form .title-register::before{
+    content: '';
+    position: absolute;
+    height: 3px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(108,228,125,1) 0%, rgba(8,26,144,1) 100%);
+}
+.Add_Popup .add_form form  .user-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1vw;
+    margin: 1vw;
+    align-items: center;
+
+}
+
+.Add_Popup .add_form form  .user-details .input-box{
+    padding-top: 1vw;
+    width: calc(100%/ 1 - 1vw);
+}
+.Add_Popup .add_form form  .user-details .input-box .details{
+    display: block;
+    font-size: 14px;
+    margin-bottom: 0.5vw;
+}
+
+.Add_Popup .add_form form  .user-details .input-box input{
+    height: 30px;
+    width: 100%;
+    outline: none;
+    border-radius: 0.5vw;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 12px;
+    border-bottom-width: 3px;
+    transition: all 0.3s ease;
+}
+.Add_Popup .add_form form  .user-details .input-box .password_merge {
+    position: relative;
+    /* display: inline-block;  */
+}
+.Add_Popup .add_form form .user-details .input-box .password_merge .icon2{
+    position: absolute;
+    margin-top: 8px;
+    right: 1vw;
+    width: 10px;
+    color: #162938;
+    line-height: 57px;
+}
+.Add_Popup .add_form form .user-details .input-box .confirmpassword_merge {
+    position: relative;
+    /* display: inline-block;  */
+}
+.Add_Popup .add_form form  .user-details .input-box .confirmpassword_merge .icon3{
+    position: absolute;
+    margin-top: 8px;
+    right: 1vw;
+    width: 10px;
+    color: #162938;
+    line-height: 57px;
+}
+
+.Add_Popup .add_form form .user-details .input-box input:focus,
+
+.Add_Popup .add_form form .user-details .input-box input:valid{
+    border-color: gray;
+}
+
+.Add_Popup .add_form form .gender-details .gender-title{
+    font-size: 12px;
+    padding-left:1vw;
+    font-weight: 500;
+}
+.Add_Popup .add_form form .gender-details .category{
+    display: flex;
+    width: 80%;
+    margin: 0.2vw 0;
+    padding-left: 1vw;
+   
+}
+.Add_Popup .add_form .gender-details .category label{
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+}
+.Add_Popup .add_form.gender-details .category label .gender{
+    font-size: 1vw;
+}
+.Add_Popup .add_form .gender-details .category .dot{
+     height: 18px;
+     width: 18px;
+     background:  #d9d9d9;
+     border-radius: 50%;
+     margin-right: 10px;
+     border: 5px solid transparent;
+     transition: all 0.3 ease;
+}
+.Add_Popup .add_form #dot-1:checked ~.category label .one,
+.Add_Popup .add_form #dot-2:checked ~.category label .two{
+    border-color: #d9d9d9 ;
+    background:  gray;
+}
+.Add_Popup .add_form form input[type="radio"]{
+    display: none;
+}
+.Add_Popup .add_form form  .button{
+    height: 30px;
+    margin: 3vw 0;
+    text-align: center;
+    
+}
+
+.Add_Popup .add_form form  .button input{
+    height: 30px;
+    width: 50%;
+    outline: none;
+    color: #fff;
+    border: none;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    background-color: gray;
+    cursor: pointer;
+}
+
+.Add_Popup .add_form form  .button input:hover{
+    background-color: #413e42;
+
+}
+form .error-msg {
+    background: rgba(255, 44, 44, 0.525);
+    color: white;
+}
+form .success-msg {
+    background: rgba(76, 175, 79, 0.63);
+    color: white;
+}
+/* Add account End */
+
+/* Show Staff Start */
+.box{
+    position: absolute;
+    top: 12%;
+    left:2%;
+    max-width: 93%;
+    height: auto;
+    width: 100%;
+    border-radius: 0.2vw;
+    padding: 30px;
+    background-color: #d9e8ff;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    z-index: -1;
+}
+.box .title {
+    position: relative;
+    font-size: 15px;
+    top: -20px;
+    font-weight: 500;
+    cursor: default;
+    user-select: none;
+    pointer-events: none;
+}
+.box .title::before{
+    content: '';
+    position: absolute;
+    height: 3px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(108,228,125,1) 0%, rgba(8,26,144,1) 100%);
+}
+.box .containers{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto;
+}
+.box .containers > .card{
+    max-width: 100%;
+    text-align: center;
+    border: 1px solid rgb(162, 160, 160);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    margin: 1vw;
+    padding: 1vw;
+}
+.box .containers > .card .option{
+    display: flex;
+    position: relative;
+    top: -5px;
+}
+
+.box .containers > .card .Update{
+    position: relative;
+}
+.box .containers > .card .Update img{
+    height: 10px;
+    margin: 2px;
+}
+.box .containers > .card .Delete{
+    position: relative;
+}
+.box .containers > .card .Delete img{
+    height: 10px;
+    margin: 2px;
+}
+.box .containers > .card .uploadimage{
+    display: flex;           /* Add Flexbox */
+    flex-direction: column;  /* Stack children vertically */
+    align-items: center;     /* Center vertically */
+    justify-content: center; /* Center horizontally */
+}
+.box .containers > .card .imagePreview {
+    position: relative;
+    width: 100px;       
+    height: 100px;      
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    
+}
+.box .containers > .card .imagePreview img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: auto;
+}
+.box .containers > .card .imagePreview .defaultImage {
+    position: absolute;  /* Absolute positioning takes the image out of the normal flow */
+    top: 0;              /* Align to the top of the container */
+    left: 0;             /* Align to the left of the container */
+    z-index: 1;          /* Lower z-index ensures this is behind the profile image */
+}
+
+.box .containers > .card .imagePreview .profileImage {
+    display: flex;           /* Add Flexbox */
+    flex-direction: column;  /* Stack children vertically */
+    align-items: center;     /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    position: relative;  /* Absolute positioning takes the image out of the normal flow */
+    z-index: 2;          /* Higher z-index ensures this is in front of the default image */
+}
+.box .containers > .card .profile-details .hidden {
+    display: none;
+}
+
+.ActiveStatus img{
+    height: 10px;
+    padding-top: 0.6vw;
+}
+
+.box .containers > .card .profile-details{
+    padding-left:1vw;
+    text-align: left;
+}
+
+.box .containers > .card .profile-details p{
+    font-size: 9px;
+}
+/* Show Staff End */
+
+/* Update Staff Start */
+.update_Popup{
+    position: absolute;
+    top: 12%;
+    justify-content: center;
+    align-items: center;
+    display: flex;  
+}
+.update_Popup .Update_case{
+    height: 500px;  /* or whatever height you desire */
+    width:96%;
+    background-color: #d9e8ff;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+    overflow-y: scroll;
+    
+}
+.update_Popup .Update_case form .title_update{
+    position: relative;
+    margin-top: 1vw;
+    margin-left: 0.3vw;
+    margin-right: 0.3vw;
+    font-size: 20px;
+    font-weight: bold;  
+}
+.update_Popup .Update_case form .title_update::before{
+    content: '';
+    position: absolute;
+    height: 3px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(108,228,125,1) 0%, rgba(8,26,144,1) 100%);
+}
+.update_Popup .Update_case .Iconclose img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    z-index: 1;
+}
+.update_Popup .Update_case form .user-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1vw;
+    margin: 1vw;
+    align-items: center;
+
+}
+
+.update_Popup .Update_case form  .user-details .input-box{
+    padding-top: 1vw;
+    width: calc(100%/ 1 - 1vw);
+}
+
+.update_Popup .Update_case form .user-details .input-box .details{
+    display: block;
+    font-size: 14px;
+    margin-bottom: 0.5vw;
+}
+
+.update_Popup .Update_case form .user-details .input-box input{
+    height: 30px;
+    width: 100%;
+    outline: none;
+    border-radius: 0.5vw;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 12px;
+    border-bottom-width: 3px;
+    transition: all 0.3s ease;
+}
+
+.update_Popup .Update_case form .user-details .input-box input:focus,
+
+.update_Popup .Update_case form .user-details .input-box input:valid{
+    border-color: gray;
+}
+
+.update_Popup .Update_case form  .button{
+    height: 30px;
+    margin: 3vw 0;
+    text-align: center;
+    
+}
+
+.update_Popup .Update_case form  .button input{
+    height: 30px;
+    width: 50%;
+    outline: none;
+    color: #fff;
+    border: none;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    background-color: gray;
+}
+
+.update_Popup .Update_case form  .button input:hover{
+    background-color: #413e42;
+
+}
+.update_Popup .msg-danger {
+    margin: 1vw 1vw;
+    background: rgba(255, 44, 44, 0.525);
+    color: white;
+}
+
+.update_Popup .msg-success {
+    margin: 4vw 1vw;
+    background: rgba(76, 175, 79, 0.63);
+    color: white;
+} 
+/* Update End */
+
+/* Delete Start */
+.Delete_Popup{
+    position: absolute;
+    top: 12%;
+    left:2%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.Delete_Popup .Delete_case{
+    height: 120px;  /* or whatever height you desire */
+    width: 93vw;
+    background-color: #d9e8ff !important;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 10px;
+    /* backdrop-filter: blur(50px); */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+.Delete_Popup .Delete_case .title_Delete{
+    position: relative;
+    margin-top: .4vw;
+    margin-left: 0.3vw;
+    margin-right: 0.3vw;
+    font-size: 15px;
+    font-weight: bold; 
+}
+.Delete_Popup .Delete_case .title_Delete::before{
+    content: '';
+    position: absolute;
+    height: 3px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(108,228,125,1) 0%, rgba(8,26,144,1) 100%);
+}
+.descript_delete{
+    position: relative;
+    top: 3vw;
+    left: 2vw;
+    right: 2vw; 
+    padding-right: 2vw;
+    font-size:4mm;
+}
+.delete_btn{
+    position:absolute;
+    right: 1vw;
+    bottom: 10px;
+}
+.delete_btn button{
+    padding: .1vw .6vw ;
+    font-size: 13px;
+    border: none;
+    border-radius: 3px;
+}
+.delete_btn .close{
+    background-color: #8b8a8caa;
+    color: white;
+}
+.delete_btn .Delete{
+    background-color: #ff0000aa;
+    color: white;
+}
+.delete_btn .close:hover{
+    background-color: #8b8a8c;
+    color: white;
+}
+.delete_btn .Delete:hover{
+    background-color: #ff0000;
+    color: white;
+}
+/* Styles for the success pop-up */
+.popupsuccess {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: opacity 0.5s;
+    z-index: 999;
+}
+
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+}
+
+.popup-message {
+    font-size: 8px;
+    padding: 10px;
+}
+
+.popupsuccess.fade-out {
+    animation: fadeOut 0.5s;
+    opacity: 0;
+}
+
+.checkmark-icon {
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+/* Tablet */
+@media only screen and (min-width: 768px){
+    /* Nav Start */
+    nav{
+        width: 0;
+        transition: width 0.3s; 
+    }
+    nav.open {
+        width: 30vw;
+    }
+    .logo{
+        padding: 1.4vw;
+        width: 100vw;
+    }
+    .logo img{
+        width: 10vw;
+        height: 10vw;
+    }
+    .logo span{
+        font-size: 2vw;
+    }
+    .logo span .usertype{
+        text-align: justify;
+        font-size: 1vw;
+    }
+    .nav-align{
+        margin-top: 3vw;
+    }
+    nav a{
+        width: 300px;
+        padding: 10px;
+
+    }
+    .icon{
+        width: 30px;
+        height: 30px;
+        margin-top: 0.7vw;
+    
+    }
+    .nav-item{
+        margin-top: 12px;
+        font-size: 2vw;
+        margin-left: 19px;
+    }
+    .nav-align a:hover{
+        background-color: aquamarine;
+        width: 25vw;
+    }
+    /* Side Nav end */
+    /* Top Nav Start */
+    .TopNav {
+        padding: 0.5vw;
+    }
+    .TopNav .nav-icon img {
+        height: 3vw;
+        margin-top: 0.2vw;
+    }
+    .logoname{
+        margin-top: 0.4vw;
+    }
+    .logoname img{
+        width: 5vw;
+        height: 5vw;   
+    }
+    .logoname span{
+        font-size: 2vw;
+    }
+    .Selection{
+        position: absolute;
+        right: 15vw;
+        margin-top: 1px;
+    }
+    .Selection li a{
+        font-size: 1.5vw;
+        margin-left: 2vw; 
+    }
+    /* Nav End */
+    .Search{
+        position: absolute;
+        top:8vw;
+    }
+    .Search .Search_btn{
+        height: 30px;
+        width: 100px;
+        font-size: 15px;
+    }
+    .Search .Search_Input{
+        height: 30px;
+        width: 200px;
+        font-size: 15px;
+    }
+
+    .addacc{
+        position: absolute;
+        left: 2%;
+        top:8vw;
+    }
+    .addacc input{
+        height: 30px;
+        width: 100px;
+        font-size: 12px;
+    }
+    .Add_Popup{
+        top:13vw;    
+    }
+    .Add_Popup .add_form{
+        height: auto;  /* or whatever height you desire */
+        width: 93vw;
+        
+    }
+    .Add_Popup .add_form .Iconclose img{
+        width: 40px;
+        height: 40px;
+    }
+    .Add_Popup .add_form form .title-register{
+        font-size: 25px;
+    }   
+    
+    .Add_Popup .add_form form  .user-details .input-box .details{
+        display: block;
+        font-size: 15px;
+        margin-bottom: 0.5vw;
+    }
+    
+    .Add_Popup .add_form form  .user-details .input-box input{
+        height: 40px;
+        width: 100%;
+        font-size: 13px;
+    }
+    
+    
+    .Add_Popup .add_form form  .button{
+        height: 30px;
+        margin: 3vw 0;
+        text-align: center;
+        
+    }
+    
+    .Add_Popup .add_form form  .button input{
+        height: 40px;
+        width: 50%;
+    }
+
+    /* Show Profiles */
+    .box{
+        position: absolute;
+        top:13vw;
+        left:2%;
+    }
+    .box .title {
+        font-size: 25px;
+    }
+    .box .containers{
+        grid-template-columns: 30% 30% 30%;
+
+    }
+    .box .containers > .card .profile img{
+        height: 100px;
+    }
+    /* Profile end */
+    .update_Popup{
+        position: absolute;
+        top: 10%;
+    }
+    .update_Popup .Update_case{
+        height: auto;  /* or whatever height you desire */   
+    }
+    .update_Popup .Update_case form .title_update{
+        position: relative;
+        margin-top: 1vw;
+        margin-left: 0.3vw;
+        margin-right: 0.3vw;
+        font-size: 20px;
+        font-weight: bold;  
+    }
+    .update_Popup .Update_case form .title_update::before{
+        content: '';
+        position: absolute;
+        height: 3px;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background: linear-gradient(90deg, rgba(108,228,125,1) 0%, rgba(8,26,144,1) 100%);
+    }
+    .update_Popup .Update_case .Iconclose img{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 35px;
+        height: 35px;
+        z-index: 1;
+    }
+    
+    .update_Popup .Update_case form .uploadimage_Truck {
+        position: relative;
+        top:10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .update_Popup .Update_case form .uploadimage_Truck .imagePreview_Truck {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .update_Popup .Update_case form  .user-details .input-box{
+        padding-top: 1vw;
+        width: calc(100%/ 1 - 1vw);
+    }
+    
+    .update_Popup .Update_case form .user-details .input-box .details{
+        display: block;
+        font-size: 16px;
+        margin-bottom: 0.5vw;
+    }
+    
+    .update_Popup .Update_case form .user-details .input-box input{
+        height: 40px;
+        width: 100%;
+        outline: none;
+        border-radius: 0.5vw;
+        border: 1px solid #ccc;
+        padding-left: 15px;
+        font-size: 12px;
+        border-bottom-width: 3px;
+        transition: all 0.3s ease;
+    }
+    
+    .update_Popup .Update_case form .user-details .input-box input:focus,
+    
+    .update_Popup .Update_case form .user-details .input-box input:valid{
+        border-color: gray;
+    }
+    
+    
+    .update_Popup .Update_case form .input-box select{
+        height: 40px;
+        width: 100%;
+        outline: none;
+        border-radius: 0.5vw;
+        border: 1px solid #ccc;
+        padding-left: 15px;
+        font-size: 14px;
+        border-bottom-width: 3px;
+        transition: all 0.3s ease;
+    }
+    .update_Popup .Update_case form .user-details .input-box select:focus,
+    .update_Popup .Update_case form .user-details .input-box select:valid{
+        border-color: gray;
+    }
+    /* Update end */
+    .update_Popup .Update_case form  .button{
+        height: 30px;
+        margin: 3vw 0;
+        text-align: center;
+        
+    }
+    
+    .update_Popup .Update_case form  .button input{
+        height: 40px;
+        font-size: 14px;
+    }
+    /* Delete Start */
+
+    .descript_delete{
+        position: relative;
+        top: 10px;
+    }
+    /* success pop up */
+    .popup-message {
+        font-size: 18px;
+        padding: 10px;
+    }
+}
+/* Desktop */
+@media only screen and (min-width: 1000px){
+    nav{
+        width: 0;
+        transition: 0.3s; 
+    }
+    nav.open {
+        width: 20vw;
+    }
+    .logo{
+        padding: 1.4vw;
+        width: 100vw;
+    }
+    .logo img{
+        width: 5vw;
+        height: 5vw;
+    }
+    .logo span{
+        font-size: 1.2vw;
+    }
+    .logo span .usertype{
+        text-align: justify;
+        font-size: 0.8vw;
+    }
+    .nav-align{
+        margin-top: 3vw;
+    }
+    nav a{
+        width: 300px;
+        padding: 10px;
+    
+    }
+    .icon{
+        width: 30px;
+        height: 30px;
+        margin-top: 0.7vw;
+       
+    }
+    .nav-item{
+        margin-top: 12px;
+        font-size: 1.2vw;
+        margin-left: 19px;
+    }
+    .nav-align a:hover{
+        background-color: aquamarine;
+        width: 25vw;
+    }
+    /* Side Nav end */
+    /* Top Nav Start */
+    .TopNav {
+        padding: 0.2vw;
+    }
+    .TopNav .nav-icon img {
+        height: 2vw;
+        margin-top: 0.2vw;
+        margin-left: 1vw;
+    }
+    .logoname{
+        margin-top: 0.1vw;
+    }
+    .logoname img{
+        width: 3vw;
+        height: 3vw;   
+    }
+    .logoname span{
+        font-size: 1.4vw;
+    }
+    .Selection{
+        position: absolute;
+        right: 6vw;
+        margin-top: 1px;
+    }
+    .Selection li a{
+        font-size: 1vw;
+        margin-left: 2vw; 
+    }
+    /* Nav End */
+    .Search{
+        position: absolute;
+        top:6vw;
+    }
+    .Search .Search_btn{
+        height: 30px;
+        width: 100px;
+        font-size: 15px;
+    }
+    .Search .Search_Input{
+        height: 30px;
+        width: 260px;
+        font-size: 15px;
+    }
+    .addacc{
+        position: absolute;
+        left: 2%;
+        top:6vw;
+    }
+    .addacc input{
+        height: 30px;
+        width: 150px;
+        font-size:15px;
+    }
+
+    .Add_Popup{
+        top:8vw;
+        left: 20vw;    
+    }
+    .Add_Popup .add_form{
+        height: 600px;  /* or whatever height you desire */
+        width: 53vw;
+    }
+    .Add_Popup .add_form .Iconclose img{
+        width: 40px;
+        height: 40px;
+    }
+    .Add_Popup .add_form form .title-register{
+        font-size: 20px;
+    }
+   
+    .Add_Popup .add_form form  .user-details .input-box{
+        padding-top: 1vw;
+        width: calc(100%/ 2 - 1vw);
+    }
+    .Add_Popup .add_form form  .user-details .input-box .password_merge {
+        position: relative;
+        /* display: inline-block;  */
+    }
+    .Add_Popup .add_form form  .user-details .input-box .password_merge .icon2{
+        position: absolute;
+        margin-top: 8px;
+        right: 1vw;
+        width: 20px;
+    }
+    .Add_Popup .add_form form  .user-details .input-box .confirmpassword_merge {
+        position: relative;
+        /* display: inline-block;  */
+    }
+    .Add_Popup .add_form form  .user-details .input-box .confirmpassword_merge .icon3{
+        position: absolute;
+        margin-top: 8px;
+        right: 1vw;
+        width: 20px;
+    }
+    .Add_Popup .add_form form .input-box select{
+        height: 2.5vw;
+        width: 100%;
+        outline: none;
+        border-radius: 0.5vw;
+        border: 1px solid #ccc;
+        padding-left: 15px;
+        font-size: 1vw;
+        border-bottom-width: 3px;
+        transition: all 0.3s ease;
+    }
+    .Add_Popup .add_form form  .button{
+        height: 30px;
+        margin: 3vw 0;
+        text-align: center;
+    }
+    .Add_Popup .add_form form  .button input{
+        height: 40px;
+        width: 50%;
+    }
+
+    /* Show Staff Start */
+    .box{
+        position: absolute;
+        top: 10vw;
+    }
+    .box .title {
+        position: relative;
+        font-size: 1.6vw;
+    
+    }
+    .box .containers{
+        display: grid;
+        grid-template-columns: 20vw 20vw 20vw 20vw;
+
+    }
+    .box .containers > .card{
+        max-width: 18vw;
+        text-align: center;
+        border: 1px solid rgb(162, 160, 160);
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        margin: 1vw;
+        padding: 1vw;
+    }
+
+    .box .containers > .card .Update img{
+        height: 1vw;
+    }
+    .box .containers > .card .Delete img{
+        height: 1vw;
+        padding-left: 0.5vw;
+    }
+    .box .containers > .card .profile img{
+        height: 10vw;
+        object-fit: cover;
+        border: 1px solid black;
+    }
+    .box .containers > .card .uploadimage{
+        display: flex;           /* Add Flexbox */
+        flex-direction: column;  /* Stack children vertically */
+        align-items: center;     /* Center vertically */
+        justify-content: center; /* Center horizontally */
+    }
+    .box .containers > .card .imagePreview {
+        /* position: relative;
+        width: 200px;       
+        height: 200px;      
+        overflow: hidden;
+        border-radius: 50%;   */
+        position: relative;
+        width: 150px;       
+        height: 150px;      
+        overflow: hidden;
+        border: 1px solid #ccc;
+        border-radius: 50%;
+        
+    }
+    .box .containers > .card .imagePreview img {
+        max-width: 100%;
+        max-height: 100%;
+        display: block;
+        margin: auto;
+    }
+    .box .containers > .card .imagePreview .defaultImage {
+        position: absolute;  /* Absolute positioning takes the image out of the normal flow */
+        top: 0;              /* Align to the top of the container */
+        left: 0;             /* Align to the left of the container */
+        z-index: 1;          /* Lower z-index ensures this is behind the profile image */
+    }
+
+    .box .containers > .card .imagePreview .profileImage {
+        display: flex;           /* Add Flexbox */
+        flex-direction: column;  /* Stack children vertically */
+        align-items: center;     /* Center vertically */
+        justify-content: center; /* Center horizontally */
+        position: relative;  /* Absolute positioning takes the image out of the normal flow */
+        z-index: 2;          /* Higher z-index ensures this is in front of the default image */
+    }
+    .box .containers > .card .profile-details .hidden {
+        display: none;
+    }
+    .ActiveStatus img{
+        height: 1.3vw;
+        padding-top: 0.6vw;
+    }
+    .box .containers > .card .profile-details{
+        text-align: left;
+        line-height: 2vw;
+        
+    }
+    .box .containers > .card .profile-details p{
+        margin-left: -12px;
+        font-size: 0.9vw;
+    }
+/* Show Staff End */
+
+    .update_Popup{
+        position: absolute;
+        top: 5vw;
+        left: 19vw;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+    .update_Popup .Update_case{
+        height: auto;
+        width: 62vw;
+        border: 2px solid rgba(255, 255, 255, .5);
+        border-radius: 20px;
+        backdrop-filter: blur(50px);
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+        position: relative;
+        overflow: hidden;
+    }
+    .update_Popup .Update_case form .title_update{
+        position: relative;
+        margin-top: 1vw;
+        margin-left: 0.3vw;
+        margin-right: 0.3vw;
+        font-size: 1.6vw;
+        font-weight: 500;     
+    }
+    .update_Popup .Update_case form .title_update::before{
+        content: '';
+        position: absolute;
+        height: 3px;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background: linear-gradient(90deg, rgba(108,228,125,1) 0%, rgba(8,26,144,1) 100%);
+    }
+    .update_Popup .Update_case .Iconclose img{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 3vw;
+        height: 3vw;
+        z-index: 1;
+    }
+    .update_Popup .Update_case form .title-register{
+        position: relative;
+        margin-top: 1vw;
+        margin-left: 0.3vw;
+        margin-right: 0.3vw;
+        font-size: 1.6vw;
+        font-weight: 500;     
+    }
+    .update_Popup .Update_case form .title-register::before{
+        content: '';
+        position: absolute;
+        height: 3px;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background: linear-gradient(90deg, rgba(108,228,125,1) 0%, rgba(8,26,144,1) 100%);
+    }
+    
+    .update_Popup .Update_case form .uploadimage_Truck {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .update_Popup .Update_case form .uploadimage_Truck .imagePreview_Truck {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        overflow: hidden;
+        border: 1px solid #ccc;
+        border-radius: 2%;
+        z-index: 5;
+    }
+    
+    .update_Popup .Update_case form .uploadimage_Truck .imagePreview_Truck img {
+        max-width: 100%;
+        max-height: 100%;
+        display: block;
+        margin: auto;
+    }
+    
+    .update_Popup .Update_case form .uploadimage_Truck .imagePreview_Truck .defaultImage {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+    
+    .update_Popup .Update_case form .uploadimage_Truck .imagePreview_Truck .profileImage {
+        position: relative;
+        z-index: 2;
+    }
+    .update_Popup .Update_case form .user-details{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 1vw;
+        margin: 1vw;
+        align-items: center;
+    
+    }
+    
+    .update_Popup .Update_case form  .user-details .input-box{
+        padding-top: 1vw;
+        width: calc(100%/ 2 - 1vw);
+    }
+    
+    .update_Popup .Update_case form .user-details .input-box .details{
+        display: block;
+        font-size: 14px;
+        margin-bottom: 0.5vw;
+    }
+    
+    .update_Popup .Update_case form .user-details .input-box input{
+        height: 3vw;
+        width: 100%;
+        outline: none;
+        border-radius: 0.5vw;
+        border: 1px solid #ccc;
+        padding-left: 15px;
+        font-size: 1vw;
+        border-bottom-width: 3px;
+        transition: all 0.3s ease;
+    }
+    
+    .update_Popup .Update_case form .user-details .input-box input:focus,
+    
+    .update_Popup .Update_case form .user-details .input-box input:valid{
+        border-color: gray;
+    }
+    
+    .update_Popup .Update_case form .user-details .input-box select:focus,
+    .update_Popup .Update_case form .user-details .input-box select:valid{
+        border-color: gray;
+    }
+    .update_Popup .Update_case form .update_btn{
+        height: 30px;
+        margin: 3vw 0;
+        text-align: center;
+        
+    }
+    .update_Popup .Update_case form .update_btn input{
+        height: 30px;
+        width: 120%;
+        outline: none;
+        color: #fff;
+        border: none;
+        font-size: 12px;
+        font-weight: 500;
+        border-radius: 5px;
+        letter-spacing: 1px;
+        background-color: gray;
+    }
+    .update_Popup .Update_case form .update_btn input:hover{
+        background-color: #413e42;
+    
+    }
+    /* Update end */
+    /* Delete Start */
+    .Delete_Popup{
+        position: absolute;
+        top: 16vw;
+        left: 34vw;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+    .Delete_Popup .Delete_case{
+        height: 10vw;
+        width: 30vw;
+        background-color: aliceblue;
+        border: 2px solid rgba(255, 255, 255, .5);
+        border-radius: 20px;
+        backdrop-filter: blur(50px);
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+        position: relative;
+        overflow: hidden;
+    }
+    .Delete_Popup .Delete_case .title_Delete{
+        position: relative;
+        margin-top: .4vw;
+        margin-left: 0.3vw;
+        margin-right: 0.3vw;
+        font-size: 1.4vw;
+        font-weight: 500;     
+    }
+    .Delete_Popup .Delete_case .title_Delete::before{
+        content: '';
+        position: absolute;
+        height: 3px;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background: linear-gradient(90deg, rgba(108,228,125,1) 0%, rgba(8,26,144,1) 100%);
+    }
+    .descript_delete{
+        position: absolute;
+        top: 3vw;
+        left: 2vw;
+        right: 2vw;
+        font-size: 1vw
+    }
+    .delete_btn{
+        position: absolute;
+        top: 7vw;
+        right: 1vw;
+    }
+    .delete_btn button{
+        padding: .1vw .6vw ;
+        font-size: 1vw;
+        border: none;
+    }
+    .delete_btn .close{
+        background-color: #8b8a8caa;
+        color: white;
+    }
+    .delete_btn .Delete{
+        background-color: #ff0000aa;
+        color: white;
+    }
+    .delete_btn .close:hover{
+        background-color: #8b8a8c;
+        color: white;
+    }
+    .delete_btn .Delete:hover{
+        background-color: #ff0000;
+        color: white;
+    }
+}

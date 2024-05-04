@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; 
+}
+body {
+    background-image: url(logo/lastBackground.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    cursor: default;
+}
+.email-verification-form {
+    width: 60vw;
+    padding: 2vw;
+    background-color: rgba(29, 29, 29, 0.5);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+}
+
+.email-verification-form .title {
+    color: whitesmoke;
+    font-size: 2.5vw;
+    text-align: center;
+    user-select: none;
+}
+
+.email-verification-form .input-verification {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.image-container img {
+    width: 5vw;
+    height: 5vw;
+    margin-left: -20vw;
+}
+.input-container {
+    flex: 1;
+}
+
+input[type="number"] {
+    width: 165%;
+    padding: 5px;
+    margin-left: -20vw;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 2vw;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 5px;
+    background-color: #d4dce3;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 2vw;
+    color: rgb(19, 19, 19);
+    font-weight: 500;
+}
+
+input[type="submit"]:hover {
+    background-color: #636363;
+}
+
+@media only screen and (min-width: 1000px){
+.email-verification-form {
+    width: 30vw;
+    padding: 2vw;
+    background-color: rgba(29, 29, 29, 0.5);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+}
+
+.email-verification-form .title {
+    color: whitesmoke;
+    font-size: 1.5vw;
+    text-align: center;
+    user-select: none;
+}
+
+.email-verification-form .input-verification {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.image-container img {
+    width: 3vw;
+    height: 3vw;
+    margin-left: -10vw;
+}
+.input-container {
+    flex: 1;
+}
+
+input[type="number"] {
+    width: 175%;
+    padding: 10px;
+    margin-left: -10vw;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    height: 45px;
+    background-color: #d4dce3;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    color: rgb(19, 19, 19);
+    font-weight: 500;
+}
+
+input[type="submit"]:hover {
+    background-color: #636363;
+}
+}

@@ -1,0 +1,1211 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+    *{
+        margin: 0;
+        padding: 0;
+        outline: none;
+        box-sizing: border-box;
+        list-style-type: none;
+        text-decoration: none;
+        font-family: 'Poppins', sans-serif; 
+    }
+    body{
+        background: linear-gradient(to right, #a3bded, #95b2e3, #86a7da, #789cd0, #6991c7); 
+    }
+/* Side Nav Start */
+nav{
+    position: fixed; 
+    height: 117%;
+    background: #ffffff;
+    width: 0;
+    overflow: hidden;
+    transition: all 0.2s linear;
+    box-shadow: 0 20px 35px (0,0,0, 0.1);
+    z-index: 2;
+    width: 0;
+    transition: width 0.3s; /* Optional: to animate the width change */
+}
+/* Open class for navMenu */
+nav.open {
+    width: 200px;
+}
+.logo{
+    display: flex;
+    transition: all 0.5s ease;
+    padding: 1.4vw;
+    width: 100vw;
+    background-color: rgba(23, 108, 255, 0.4); 
+}
+.logo img{
+    width: 50px;
+    height: 50px;
+    border-radius: 10vw;
+}
+.logo span{
+    font-weight: bold;
+    margin-left: 2vw;
+    text-align:left;
+    margin-top: 15px;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: rgb(0, 0, 0);
+}
+.logo span .usertype{
+    text-align: justify;
+    font-size: 6px;
+}
+.nav-align{
+    margin-top: 3vw;
+}
+nav a{
+    display: flex;
+    color: gray;
+    width: 300px;
+    padding: 10px;
+}
+.icon{
+    width: 30px;
+    height: 30px;
+    margin-top: 0.7vw; 
+}
+.nav-item{
+    margin-top: 12px;
+    font-size: 3vw;
+    margin-left: 19px;
+}
+.nav-align a:hover{
+    background-color: aquamarine;
+    width: 60vw;
+}
+/* Side Nav end */
+/* Top Nav Start */
+.TopNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #b3c7e6;
+    padding: 0.5vw;
+}
+.TopNav .nav-icon img {
+    height: 20px;
+    margin-top: 1vw;
+    cursor: pointer;
+}
+.logoname{
+    display: flex;
+    position: absolute;
+    left: 10vw;
+    margin-top: 1vw;
+}
+.logoname img{
+    width: 40px;
+    height: 40px;   
+     /*  */
+     cursor: default;
+     pointer-events: none;
+     /*  */    
+}
+.logoname span{
+    margin-top: 10px;
+    margin-left: 1px;
+    font-size: 15px;
+    font-weight: 600;
+    font-style: oblique;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+     /*  */
+     cursor: default;
+     pointer-events: none;
+     /*  */    
+}
+.Selection{
+    display: flex;
+    position: absolute;
+    list-style-type: none;
+    right: 6vw;
+    margin-top: 1px;
+}
+.Selection li a{
+    position: relative;
+    font-size: 10px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 5vw;
+    text-transform: uppercase;  
+}
+.Selection li a:after{
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: rgb(0, 0, 0);
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+.Selection li a:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+/* Nav End */
+.Search{
+    position: absolute;
+    top: 7%;
+    right: 5%;
+    margin-bottom: 1vw;
+    z-index: -1;
+}
+.Search .Search_btn{
+    height: 20px;
+    width: 15vw;
+    outline: none;
+    color: #fff;
+    border: none;
+    font-size: 10px;
+    font-weight: 500;
+    border-radius: 2px;
+    letter-spacing: 1px;
+    background-color: gray;
+    cursor: pointer;
+    }
+.Search .Search_Input{
+    height: 20px;
+    width: 30vw;
+    font-size: 10px;
+}
+
+.qrscanner_btn {
+    position: absolute;
+    top: 1vw;
+    right: 20vw;
+    z-index: 2;
+}
+.qrscanner_btn input{
+    height: 20px;
+    width: auto;
+    padding: 0 10px 0 10px;
+    outline: none;
+    color: #fff;
+    border: none;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 3px;
+    letter-spacing: 1px;
+    background-color: gray;
+    cursor: pointer;
+}
+.qrscanner_btn input:hover{
+    background-color: rgb(66, 66, 66);
+}
+.qrscanner_Popup {
+    display: none;
+    position: fixed;
+    top: 7%;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+.qrscanner_Popup .add_form{
+    max-width: 80vw;
+    max-height: 80vh;
+    width: 90vw;
+    background-color: aliceblue;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+    overflow-y: auto;   
+}
+.qrscanner_Popup .add_form .Iconclose img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    z-index: 1;
+}
+.qrscanner_Popup .add_form .title_Review{
+    position: relative;
+    margin-top: 1vw;
+    margin-left: 0.3vw;
+    margin-right: 0.3vw;
+    font-size: 20px;
+    font-weight: bold;
+}
+.qrscanner_Popup .add_form .title_Review::before{
+    content: '';
+    position: absolute;
+    height: 3px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(108,228,125,1) 0%, rgba(8,26,144,1) 100%);
+}
+.qrscanner_Popup main{
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2vw;
+    margin-left: 15vw;
+}
+.qrscanner_Popup main #reader {
+    width: 130%;
+    height: 40%;
+    background-color: #c6d5ec;
+    border: 2px solid red;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.qrscanner_Popup #result {
+    text-align: center;
+    font-size: 1rem;
+}
+.box{
+    position: absolute;
+    top: 12%;
+    left:2%;
+    max-width: 93%;
+    height: auto;
+    width: 100%;
+    border-radius: 0.2vw;
+    padding: 30px;
+    background-color: #d9e8ff;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    z-index: -1;
+}
+.TransactHistory {
+    position: absolute;
+    top: 1vw;
+    right: 2vw;
+    z-index: 2;
+
+}
+.TransactHistory input{
+    height: 20px;
+    width: auto;
+    padding: 0.3vw;
+    outline: none;
+    color: #fff;
+    border: none;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 3px;
+    letter-spacing: 1px;
+    background-color: gray;
+    cursor: pointer;
+}
+.TransactHistory input:hover{
+    background-color: rgb(66, 66, 66);
+}
+
+.box .title {
+    position: relative;
+    font-size: 15px;
+    /* top: 10px; */
+    font-weight: 500;
+    cursor: default;
+    pointer-events: none;
+    user-select: none;
+}
+.box .title::before{
+    content: '';
+    position: absolute;
+    height: 3px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(108,228,125,1) 0%, rgba(8,26,144,1) 100%);
+}
+
+.box .table-container {
+    position: relative;
+    top: 20px;
+    overflow-x: auto; 
+    max-width: 100%
+}
+.box .Table {
+    width: max-content; 
+}
+
+.box .Table th,
+.box .Table td {
+    border: 1px solid black;
+    padding: 0.6vw;
+    text-align: center;
+    font-size: 12px;
+    
+}
+.box .Table th{
+    background-color: gray;
+    color: aliceblue;
+}
+tr td a{
+    outline: none;
+    color: #fff;
+    border: none;
+    padding: 0.4vw;
+    font-weight: 500;
+    border-radius: 3px;
+    letter-spacing: 1px;
+    /* background-color: gray; */
+}
+tr td .Show {
+    background-color: gray;
+        
+}   
+
+
+.Show_Popup{
+    position: absolute;
+    top: 12%;
+    left:2%;
+    justify-content: center;
+    align-items: center;
+    display: flex;  
+    overflow: auto; /* Enable scrolling for the entire body */
+}
+.Show_Popup .add_form{
+    height: 500px;  /* or whatever height you desire */
+    width: 95vw;
+    background-color: #d9e8ff;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+    overflow-y: scroll;
+    
+}
+.Show_Popup .add_form .Iconclose img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    z-index: 1;
+    cursor: pointer;
+}
+.Show_Popup .add_form .title_Review{
+    position: relative;
+    margin-top: 1vw;
+    margin-left: 0.3vw;
+    margin-right: 0.3vw;
+    font-size: 20px;
+    font-weight: bold;       
+}
+.Show_Popup .add_form .title_Review::before{
+    content: '';
+    position: absolute;
+    height: 3px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(108,228,125,1) 0%, rgba(8,26,144,1) 100%);
+}
+
+
+.package_profile{
+    margin-top: 1vw;
+    display: block;
+}
+.imagePreview {
+    position: relative;
+    margin-left: 1vw;
+    width: 40%;
+    height: 35vw;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.imagePreview:hover .arrow {
+    display: block;
+}
+
+.imagePreview .slides {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    width: 100%;     
+    height: 100%;  
+}
+
+.imagePreview .slide {
+    flex: 0 0 100%;   
+    height: 100%;  
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: none; 
+}
+
+.imagePreview .slide.active { 
+    display: block;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    line-height: 20px;
+    border-radius: 50%;
+}
+
+.arrow.left {
+    left: 5px;
+}
+
+.arrow.right {
+    right: 5px;
+}
+
+.arrow:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+}
+
+.PackageInfo{
+    /* position: absolute;
+    left: 20vw; */
+    font-size: 12px;
+}
+.PackageInfo .desc1{
+    font-size: 15px;
+    font-weight: 500;
+    position: relative;
+    margin-top: 5px;
+    margin-bottom: -5px;
+}
+.PackageInfo .desc1::before{
+    content: '';
+    position: absolute;
+    height: 3px;
+    left: 0;
+    bottom: 0;
+    width:100%;
+    background: black;
+}
+.PackageInfo p{
+    padding-bottom: 0.5vw;
+}
+
+.Personal_Info2{
+    display: none;
+}
+
+.Personal_Info1{
+    font-size: 12px;
+}
+.Personal_Info1 p{
+    padding-bottom: 0.5vw;
+}
+.Personal_Info1 .desc2{
+    font-size: 15px;
+    font-weight: 500;
+    position: relative;
+    margin-top: 5px;
+    margin-bottom: -5px;
+}
+.Personal_Info1 .desc2::before{
+    content: '';
+    position: absolute;
+    height: 3px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: black;
+}
+
+.PaymentMethod{
+    /* position: absolute;
+    left: 50vw; */
+    font-size: 12px;
+}
+
+.PaymentMethod .desc1{
+    font-size: 15px;
+    font-weight: 500;
+    position: relative;
+    margin-top: 5px;
+    margin-bottom: -5px;
+}
+.PaymentMethod .desc1::before{
+    content: '';
+    position: absolute;
+    height: 3px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: black;
+}
+.PaymentMethod p{
+    padding-bottom: 0.5vw;
+}
+.ImageTransaction {
+    position: relative;
+    margin-left: 1vw;
+    margin-right: -4vw;
+    width: 51vw;
+    height: 91vw;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+/* .ImageTransaction {
+    flex: 1;
+    display: flex;
+} */
+
+.ImageTransaction .slide {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+}
+
+.imagetransac{
+    height: 100%;
+    width: auto;
+    outline: none;
+    color: #fff;
+    border: none;
+    font-size: 2vw;
+    font-weight: 500;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    padding-left: 6px;
+    padding-right: 6px;
+    background-color: gray;
+}
+
+.Show_PopupImg{
+    position: absolute;
+    top: 12%;
+    left:2%;
+    justify-content: center;
+    align-items: center;
+    display: none;  
+ z-index: 5;
+}
+
+.Show_PopupImg .add_form{
+    height: 500px;  /* or whatever height you desire */
+    width: 95vw;
+    background-color: #d9e8ff;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+    overflow-y: auto;
+    
+}
+.Show_PopupImg .add_form .Icon_close img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    z-index: 4;
+    cursor: pointer;
+}
+.Show_PopupImg .add_form .title_Review{
+    position: relative;
+    margin-top: 1vw;
+    margin-left: 0.3vw;
+    margin-right: 0.3vw;
+    font-size: 20px;
+    font-weight: bold;       
+}
+.Show_PopupImg .add_form .title_Review::before{
+    content: '';
+    position: absolute;
+    height: 3px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(108,228,125,1) 0%, rgba(8,26,144,1) 100%);
+}
+.Show_PopupImg .add_form .table-container {
+    overflow-x: auto;
+    width: 90%;
+    max-width: 100%;
+    position: relative;
+    top: 20px;
+    margin: auto; /* Center the table horizontally */
+    /* left: 20px; */
+}
+
+.Show_PopupImg .add_form .Table {
+    width: 100%; 
+    margin: auto; /* Center the table horizontally */
+}
+
+.Show_PopupImg .add_form .Table th,
+.Show_PopupImg .add_form .Table td {
+    border: 1px solid black;
+    padding: 0.6vw;
+    text-align: center;
+    font-size: 12px;
+    
+}
+.Show_PopupImg .add_form .Table th{
+    background-color: gray;
+    color: aliceblue;
+}
+
+.Show_PopupImg .add_form tr td img{
+    height: 40vw;
+}
+
+/* Tablet */
+@media only screen and (min-width: 768px){
+    /* Nav Start */
+    nav{
+        width: 0;
+        transition: width 0.3s; 
+    }
+    nav.open {
+        width: 30vw;
+    }
+    .logo{
+        padding: 1.4vw;
+        width: 100vw;
+    }
+    .logo img{
+        width: 10vw;
+        height: 10vw;
+    }
+    .logo span{
+        font-size: 2vw;
+    }
+    .logo span .usertype{
+        text-align: justify;
+        font-size: 1vw;
+    }
+    .nav-align{
+        margin-top: 3vw;
+    }
+    nav a{
+        width: 300px;
+        padding: 10px;
+
+    }
+    .icon{
+        width: 30px;
+        height: 30px;
+        margin-top: 0.7vw;
+    
+    }
+    .nav-item{
+        margin-top: 12px;
+        font-size: 2vw;
+        margin-left: 19px;
+    }
+    .nav-align a:hover{
+        background-color: aquamarine;
+        width: 25vw;
+    }
+    /* Side Nav end */
+    /* Top Nav Start */
+    .TopNav {
+        padding: 0.5vw;
+    }
+    .TopNav .nav-icon img {
+        height: 3vw;
+        margin-top: 0.2vw;
+    }
+    .logoname{
+        margin-top: 0.4vw;
+    }
+    .logoname img{
+        width: 5vw;
+        height: 5vw;   
+    }
+    .logoname span{
+        font-size: 2vw;
+    }
+    .Selection{
+        position: absolute;
+        right: 15vw;
+        margin-top: 1px;
+    }
+    .Selection li a{
+        font-size: 1.5vw;
+        margin-left: 2vw; 
+    }
+    /* Nav End */
+    
+    .Search{
+        position: absolute;
+        top:8vw;
+    }
+    .Search .Search_btn{
+        height: 30px;
+        width: 100px;
+        font-size: 15px;
+    }
+    .Search .Search_Input{
+        height: 30px;
+        width: 200px;
+        font-size: 15px;
+    }
+    .qrscanner_btn {
+        right: 10vw;
+    }
+    .qrscanner_btn input{
+        height: 30px;
+        font-size: 15px;
+    }
+   /*  */
+   .box{
+    position: absolute;
+    top:13vw;
+    /* left:2%; */
+    }
+    .TransactHistory input{
+        height: 30px;
+        font-size: 15px;
+    }
+
+    .TransactHistory input:hover{
+        background-color: rgb(66, 66, 66);
+    }
+    .box .title {
+        font-size: 25px;
+    }
+    
+    .box .Table th,
+    .box .Table td {
+        font-size: 15px;
+        
+    }
+    .Show_Popup{
+        top:13vw;
+    }
+    .Show_Popup .add_form{
+        height: 800px;
+        width: 93vw;
+        
+    }
+    .Show_Popup .add_form .Iconclose img{
+        width: 40px;
+        height: 40px;
+    }
+    .Show_Popup .add_form .title_Review{
+        font-size: 25px;
+    }
+    .package_profile{
+        margin-top: 1vw;
+    }
+    .PackageInfo{
+        font-size: 20px;
+    }
+    .PackageInfo .desc1{
+        font-size: 22px;
+        margin-bottom: -20px;
+    }
+    .PaymentMethod{
+        /* position: absolute;
+        left: 50vw; */
+        font-size: 20px;
+        margin-top: 20px;  
+    }
+    .PaymentMethod .desc1{
+        font-size: 22px;
+        margin-bottom: -20px;
+    }
+    .Personal_Info1{
+        font-size: 20px;
+    }
+    .Personal_Info1 p{
+        padding-bottom: 0.5vw;
+    }
+    .Personal_Info1 .desc2{
+        font-size: 22px;
+        margin-bottom: -20px;
+    }
+    .ImageTransaction {
+        width: 35vw;
+        height: 65vw;
+    }
+    .imagetransac{
+        height: 120%;
+        width: auto;
+        font-size: 2vw;
+    }
+
+    .Show_PopupImg{
+        top:13vw;
+    }
+    .Show_PopupImg .add_form{
+        height: 800px;  /* or whatever height you desire */
+        width: 93vw;
+        
+    }
+    .Show_PopupImg .add_form .Icon_close img{
+        width: 40px;
+        height: 40px;
+    }
+    .Show_PopupImg .add_form .title_Review{
+        font-size: 25px;
+    }
+    .Show_PopupImg .add_form .Table th,
+    .Show_PopupImg .add_form .Table td {
+        font-size: 15px;
+        
+    }
+    .Show_PopupImg .add_form tr td img{
+        height: 30vw;
+    }
+
+}
+/* Desktop */
+@media only screen and (min-width: 1000px){
+    nav{
+        width: 0;
+        transition: 0.3s; 
+    }
+    nav.open {
+        width: 20vw;
+    }
+    .logo{
+        padding: 1.4vw;
+        width: 100vw;
+    }
+    .logo img{
+        width: 5vw;
+        height: 5vw;
+    }
+    .logo span{
+        font-size: 1.2vw;
+    }
+    .logo span .usertype{
+        text-align: justify;
+        font-size: 0.8vw;
+    }
+    .nav-align{
+        margin-top: 3vw;
+    }
+    nav a{
+        width: 300px;
+        padding: 10px;
+    
+    }
+    .icon{
+        width: 30px;
+        height: 30px;
+        margin-top: 0.7vw;
+    
+    }
+    .nav-item{
+        margin-top: 12px;
+        font-size: 1.2vw;
+        margin-left: 19px;
+    }
+    .nav-align a:hover{
+        background-color: aquamarine;
+        width: 25vw;
+    }
+    /* Side Nav end */
+    /* Top Nav Start */
+    .TopNav {
+        padding: 0.2vw;
+    }
+    .TopNav .nav-icon img {
+        height: 2vw;
+        margin-top: 0.2vw;
+        margin-left: 1vw;
+    }
+    .logoname{
+        margin-top: 0.1vw;
+    }
+    .logoname img{
+        width: 3vw;
+        height: 3vw;   
+    }
+    .logoname span{
+        font-size: 1.4vw;
+    }
+    .Selection{
+        position: absolute;
+        right: 6vw;
+        margin-top: 1px;
+    }
+    .Selection li a{
+        font-size: 1vw;
+        margin-left: 2vw; 
+    }
+    /* Nav End */
+    .Search{
+        position: absolute;
+        top:6vw;
+    }
+    .Search .Search_btn{
+        height: 30px;
+        width: 100px;
+        font-size: 15px;
+    }
+    .Search .Search_Input{
+        height: 30px;
+        width: 260px;
+        font-size: 15px;
+    }
+    .qrscanner_btn {
+        right: 130px;
+    }
+    .qrscanner_Popup {
+        top: 7%;
+        left: 25vw;
+    }
+    .qrscanner_Popup .add_form{
+        width: 50vw;    
+    }
+    .qrscanner_Popup .add_form .Iconclose img{
+        width: 3vw;
+        height: 3vw;
+    }
+    .qrscanner_Popup .add_form .title_Review{
+        position: relative;
+        margin-top: 1vw;
+        font-size: 1.6vw;  
+    }
+    .qrscanner_Popup main{
+        width: 20vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 2vw;
+        margin-left: 15vw;
+    }
+    .qrscanner_Popup main #reader {
+        width: 100%;
+        height: 2%;
+    }
+    .box{
+        position: absolute;
+        top:9.5vw;
+        left:2%;
+    }
+    .box .title {
+        font-size: 2vw;
+    }
+    .box .table-container {
+        max-width: 100%;  
+    }
+    
+    .box .Table {      
+        max-width: 100%;    
+    }
+        
+    .box .Table th,
+    .box .Table td {
+        border: 1px solid black;
+        padding: 0.6vw;
+        text-align: center;
+        font-size: 0.8vw;
+    }
+    .Show_Popup{
+        position: absolute;
+        top: 3vw;
+        left: 8vw;
+        
+    }
+    .Show_Popup .add_form{
+        height: 46vw;
+        width: 80vw;
+        /* overflow: hidden;
+        overflow-y: none; */
+        overflow: auto; 
+    }
+    .Show_Popup .add_form .Iconclose img{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 3vw;
+        height: 3vw;
+        z-index: 1;
+    }
+    .Show_Popup .add_form .title_Review{
+        position: relative;
+        margin-top: 1vw;
+        font-size: 1.6vw;  
+    }
+    .Show_Popup .add_form .title_Review::before{
+        height: 3px;
+    }
+    .package_profile{
+        margin-top: 1vw;
+        display: flex;
+    }
+    .imagePreview {
+        width: 15vw;
+        height: 15vw;
+    }
+    
+    .imagePreview .slides {
+        display: flex;
+        transition: transform 0.3s ease-in-out;
+        width: 150px;    
+    }
+    
+    .imagePreview .slide {
+        flex: 0 0 15vw; 
+        height: 15vw;
+    }
+    
+    .imagePreview .slide.active { 
+        display: block;
+    }
+    .PackageInfo{
+        position: absolute;
+        left: 20vw;
+        right: auto;
+        font-size: 1.1vw;
+    }
+    .PackageInfo .desc1{
+        font-size: 1.6vw;
+        font-weight: 500;
+        position: relative;
+    }
+    .PackageInfo .desc1::before{
+        content: '';
+        position: absolute;
+        height: 3px;
+        left: 0;
+        bottom: 0;
+        width: 105%;
+        background: black;
+    }
+    .PackageInfo p{
+        padding-bottom: 0.5vw;
+    }
+    .Personal_Info1{
+        display: none;
+    }
+    .PaymentMethod{
+        position: absolute;
+        top: 2.9vw;
+        left: 50vw;
+        right: auto;
+        font-size: 1.1vw;
+    }
+    .PaymentMethod .desc1{
+        font-size: 1.6vw;
+        font-weight: 500;
+        position: relative;
+    }
+    .PaymentMethod .desc1::before{
+        height: 2.5px;
+    }
+    .PaymentMethod p{
+        padding-bottom: 0.5vw;
+    }
+    .Personal_Info2{
+        display: block;
+    }
+    .Personal_Info2 .desc2{
+        font-weight: 500;
+        position: relative;
+    }
+    .Personal_Info2 .desc2::before{
+        content: '';
+        position: absolute;
+        height: 3px;
+        left: 0;
+        bottom: 0;
+        width: 50%;
+        background: black;
+    }
+    .Personal_Info2{
+        font-size: 1.1vw;
+    }
+    .Personal_Info2 p{
+        padding-bottom: 0.5vw;
+    }
+    .Personal_Info2 .desc2{
+     font-size: 1.6vw;
+     margin-bottom: -20px;
+    }
+    .ImageTransaction {
+        /* margin-left: 100px; */
+        width: 15vw;
+        height: 25vw;
+    }
+
+    .imagetransac{
+        height: 120%;
+        width: auto;
+        outline: none;
+        color: #fff;
+        border: none;
+        font-size: 1vw;
+        font-weight: 500;
+        border-radius: 5px;
+        letter-spacing: 1px;
+        background-color: gray;
+        padding-left: 6px;
+        padding-right: 6px;
+        cursor: pointer;
+    }
+    .Show_PopupImg{
+        position: absolute;
+        top: 6vw;
+        left: 18vw;
+    }
+    .Show_PopupImg .add_form{
+        height: 36vw;
+        width: 60vw;
+        /* overflow: hidden; */
+        /* overflow-y: none; */
+        position: relative;
+        z-index: 4;
+    }
+    .Show_PopupImg .add_form .Icon_close img{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 3vw;
+        height: 3vw;
+        z-index: 4;
+    }
+    .Show_PopupImg .add_form .title_Review{
+        position: relative;
+        margin-top: 1vw;
+        font-size: 1.6vw;  
+    }
+    .Show_PopupImg .add_form .title_Review::before{
+        height: 3px;
+    }
+    .Show_PopupImg .add_form  .table-container {
+        max-width: 100%;  
+    }
+    
+    .Show_PopupImg .add_form  .Table {   
+        width: 80%;   
+        /* max-width: 100%;     */
+    }
+        
+    .Show_PopupImg .add_form  .Table th,
+    .Show_PopupImg .add_form  .Table td {
+        border: 1px solid black;
+        padding: 0.6vw;
+        text-align: center;
+        font-size: 0.8vw;
+    }
+    .Show_PopupImg .add_form tr td img{
+        height: 15vw;
+    }
+}

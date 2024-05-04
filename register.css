@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-image: url(logo/lastBackground.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.container{
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    border-radius: 6px;
+    padding: 30px;
+    margin: 0 15px;
+    /* background-color: #fff; */
+    background-color: rgba(29, 29, 29, 0.5);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+.container .backbtn{
+    position: relative;
+    padding:1px 1px 30px;
+    margin-top: -14px;
+}
+.container .backbtn input{
+    height: 30px;
+    width:80px;
+    outline: none;
+    color: #fff;
+    border: none;
+    font-size: 10px;
+    font-weight: 500;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    background-color: gray;
+    cursor: pointer;
+}
+.container .backbtn input:hover{
+    background-color: #413e42;
+
+}
+
+.container .title{
+    font-size: 25px;
+    font-weight: 500;
+    color: whitesmoke;
+    position: relative;
+    cursor: default;
+    user-select: none;
+}
+.container .title::before{
+    content: '';
+    position: absolute;
+    height: 3px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(90deg, rgb(255, 132, 1) 0%, rgb(4, 0, 118) 100%);
+}
+
+.container form .user-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3px 0 12px 0;
+    cursor: default;
+    user-select: none;
+}
+form .user-details .input-box{
+    padding-top: 30px;
+    width: calc(100%/ 2 - 20px);
+}
+.user-details .input-box .details{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: whitesmoke;
+}
+.user-details .input-box input{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 3px;
+    transition: all 0.3s ease;
+}
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+    border-color: gray;
+}
+.user-details .password_merge {
+    position: relative;
+    /* display: inline-block;  */
+}
+.user-details .password_merge .icon2{
+    position: absolute;
+    margin-top: 8px;
+    right: 1vw;
+    width: 25px;
+    color: #162938;
+    line-height: 57px;
+    cursor: pointer;
+}
+.user-details .confirmpassword_merge {
+    position: relative;
+    /* display: inline-block;  */
+}
+.user-details .confirmpassword_merge .icon3{
+    position: absolute;
+    margin-top: 8px;
+    right: 10px;
+    width: 25px;
+    color: #162938;
+    line-height: 57px;
+    cursor: pointer;
+}
+form .gender-details .gender-title{
+    font-size: 20px;
+    font-weight: 500;
+    color: whitesmoke;
+    cursor: default;
+    user-select: none;
+}
+form .gender-details .category{
+    display: flex;
+    width: 80%;
+    margin: 14px 0;
+   
+}
+.gender-details .category label{
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+    color: whitesmoke;
+}
+.gender-details .category .dot{
+     height: 18px;
+     width: 18px;
+     background:  #d9d9d9;
+     border-radius: 50%;
+     margin-right: 10px;
+     border: 5px solid transparent;
+     transition: all 0.3 ease;
+     cursor: pointer;
+}
+#dot-1:checked ~.category label .one,
+#dot-2:checked ~.category label .two{
+    border-color: #d9d9d9 ;
+    background:  gray;
+}
+form input[type="radio"]{
+    display: none;
+}
+form .button{
+    height: 45px;
+    margin: 30px 0;
+    text-align: center;
+}
+form .terms{
+    text-align: center;
+    margin-top: -1vw;
+    margin-bottom: -0.5vw;
+ 
+}
+form .terms input{
+  cursor: pointer;
+ 
+}
+
+form .error-msg {
+    background: rgba(255, 44, 44, 0.525);
+    color: white;
+
+}
+form .success-msg {
+    background: rgba(76, 175, 79, 0.63);
+    color: white;
+}
+form .button input{
+    height: 100%;
+    width: 30%;
+    outline: none;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    background-color: gray;
+    cursor: pointer;
+}
+form .button input:hover{
+    background-color: #413e42;
+}
+ @media (max-width: 1000px) {
+    form .user-details .input-box{
+        width: calc(100%/ 1 - 20px);
+    }
+    /* .container{
+        
+        max-width: 100%;
+
+        align-items: center;
+        justify-content: center;
+       
+    }
+    form .user-details .input-box{
+        margin-bottom: 15px;
+        width: 100%;
+    }
+    .user-details .input-box .details{
+        display: block;
+        font-weight: 200;
+    }
+    .user-details .input-box input{
+    
+        font-size: 12px;
+    } */
+
+ }

@@ -1,0 +1,803 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif; 
+}
+body{
+    background: linear-gradient(to right, #a3bded, #95b2e3, #86a7da, #789cd0, #6991c7);
+    /* overflow-x: hidden; */
+}
+/* Side Nav Start */
+nav{
+    position: fixed; 
+    height: 117%;
+    background: #ffffff;
+    width: 0;
+    overflow: hidden;
+    transition: all 0.2s linear;
+    box-shadow: 0 20px 35px (0,0,0, 0.1);
+    z-index: 2;
+    width: 0;
+    transition: width 0.3s; /* Optional: to animate the width change */
+}
+/* Open class for navMenu */
+nav.open {
+    width: 200px;
+}
+.logo{
+    display: flex;
+    transition: all 0.5s ease;
+    padding: 1.4vw;
+    width: 100vw;
+    background-color: rgba(23, 108, 255, 0.4); 
+}
+.logo img{
+    width: 50px;
+    height: 50px;
+    border-radius: 10vw;
+}
+.logo span{
+    font-weight: bold;
+    margin-left: 2vw;
+    text-align:left;
+    margin-top: 15px;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: rgb(0, 0, 0);
+}
+.logo span .usertype{
+    text-align: justify;
+    font-size: 6px;
+}
+.nav-align{
+    margin-top: 3vw;
+}
+nav a{
+    display: flex;
+    color: gray;
+    width: 300px;
+    padding: 10px;
+}
+.icon{
+    width: 30px;
+    height: 30px;
+    margin-top: 0.7vw; 
+}
+.nav-item{
+    margin-top: 12px;
+    font-size: 3vw;
+    margin-left: 19px;
+}
+.nav-align a:hover{
+    background-color: aquamarine;
+    width: 60vw;
+}
+/* Side Nav end */
+/* Top Nav Start */
+.TopNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #b3c7e6;
+    padding: 0.5vw;
+}
+.TopNav .nav-icon img {
+    height: 20px;
+    margin-top: 1vw;
+    cursor: pointer;
+}
+.logoname{
+    display: flex;
+    position: absolute;
+    left: 10vw;
+    margin-top: 1vw;
+}
+.logoname img{
+    width: 40px;
+    height: 40px;   
+     /*  */
+     cursor: default;
+     pointer-events: none;
+     /*  */    
+}
+.logoname span{
+    margin-top: 10px;
+    margin-left: 1px;
+    font-size: 15px;
+    font-weight: 600;
+    font-style: oblique;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+     /*  */
+     cursor: default;
+     pointer-events: none;
+     /*  */    
+}
+.Selection{
+    display: flex;
+    position: absolute;
+    list-style-type: none;
+    right: 6vw;
+    margin-top: 1px;
+}
+.Selection li a{
+    position: relative;
+    font-size: 10px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 5vw;
+    text-transform: uppercase;  
+}
+.Selection li a:after{
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: rgb(0, 0, 0);
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+.Selection li a:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+/* Nav End */
+.Dashboard{
+    display: flex;
+    position: absolute;
+    top: 10vw;
+    left:12vw; 
+}
+.Dashboard .DashboardTitle{
+    display: flex;
+    position: absolute;
+    /* top: 3.5vw;
+    left:6vw; */
+    color: black;
+    font-size: 20px;
+    font-style: italic;
+     /*  */
+     cursor: default;
+     pointer-events: none;
+     /*  */    
+}
+.formbox{
+    display: flex;
+    position: relative;
+    top: 10vw;
+}
+.Dashboard .Items{
+    padding-top: 10px;
+    height: auto;
+    width:  24.5vw;
+    background-color:rgb(255, 255, 255);
+    margin: 1vw;
+    border-radius: 5px;
+    box-shadow: 0.2vw 0.2vw #888888;
+    position: relative;
+    left: -2vw;
+}
+.Dashboard .Items.package {
+    background-color: #23eefc;
+}
+.Dashboard .Items.truck {
+    background-color: #fcd823;
+}
+.Dashboard .Items.staff {
+    background-color: #fc2344;
+}
+.Dashboard .Items img{
+    height: 10vw;
+    position: relative;
+    top: -10vw;
+    left: 8vw;
+    cursor: default;
+    pointer-events: none;
+    user-select: none;
+    /* filter: blur(1px); */
+}
+.Dashboard .Items .numbers{
+    position: relative;
+    left:11vw;
+    top: 14vw;
+    color: black;
+    font-size: 5vw;
+    font-weight: bolder;
+    font-style: italic;
+     /*  */
+     cursor: default;
+     pointer-events: none;
+     /*  */    
+}
+.Dashboard .Items h3{
+    position: relative;
+    left: 3vw;
+    top: 14vw;
+    color: black;
+    font-size:2vw;
+    font-style: italic;
+     /*  */
+     cursor: default;
+     pointer-events: none;
+     /*  */    
+}
+.Dashboard .Items input {
+    margin-top: 7vw;
+    width:  24.5vw; 
+    height: 7vw;
+    border: none;
+    font-size: 3vw;
+    border-radius: 1;
+    cursor: pointer;
+}
+.Dashboard .Items input:active{
+    transform: scale(0.95);
+}
+.Dashboard .Items .package_btn{
+    background-color:#1fbac4;
+}
+.Dashboard .Items .truck_btn{
+    background-color:#d9b91c;
+}
+
+.Dashboard .Items .staff_btn{
+    background-color:#c21b34;
+}
+
+.Dashboard .Items input:hover{
+    background-color: #8888885e;
+}
+
+.box{
+    position: absolute;
+    top: 65vw;
+    left:9vw;
+    height: auto;
+    width: 79.4vw;
+    border-radius: 6px;
+    padding: 30px;
+    background-color: #d9e8ff;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+.box .TitleClient{
+    font-size: 10px;
+   font-weight: bold;
+    /*  */
+    cursor: default;
+    pointer-events: none;
+    user-select: none;
+    /*  */    
+}
+#loyalClientsChart {
+    width: 600vw;
+    height: 200vw;
+}
+
+.box .allTransactions {
+    display: none;
+}
+
+.box .allTransactions Table {
+    width: 100%;
+}
+
+.box .allTransactions Table th,
+.box .allTransactions Table td {
+    border: 1px solid black;
+    padding: 0.6vw;
+    text-align: center;
+    font-size: 0.8vw;
+}
+.box .allTransactions Table th{
+    background-color: gray;
+    color: aliceblue;
+}
+
+.box .AnalyticsPrint {
+    height: 30px;
+    width: 80px;
+    outline: none;
+    color: #fff;
+    border: none;
+    font-size: 10px;
+    font-weight: 500;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    background-color: gray;
+    position: relative; 
+    top: 0;
+    left: auto;
+    right: 0;
+    margin-left: calc(100% - 80px); 
+    cursor: pointer;
+}
+.box .AnalyticsPrint:active{
+    transform: scale(0.95);
+}
+
+.popupAnalytics{
+    position: absolute;
+    top: 8vw;
+    left: -5vw;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.popupAnalytics .formAnalytics{
+    height: auto;
+    width: 90vw;
+    background-color: #d9e8ff;
+    border-radius: 10px;
+    backdrop-filter: blur(50px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+.popupAnalytics .formAnalytics .IconcloseAnalytics img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    z-index: 1;
+}
+.popupAnalytics .formAnalytics .title_transaction{
+    position: relative;
+    top: 3vw;
+    left: 0.3vw;
+    right: 0.3vw;
+    font-size: 15px;
+    font-weight: 500;
+     /*  */
+     cursor: default;
+     pointer-events: none;
+     /*  */         
+}
+.popupAnalytics .formAnalytics .title_transaction::before{
+    content: '';
+    position: absolute;
+    height: 3px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    
+    background: linear-gradient(90deg, rgba(108,228,125,1) 0%, rgba(8,26,144,1) 100%);
+}
+.popupAnalytics .formAnalytics  .table-container {
+    overflow-x: auto; 
+    max-width: 100%; 
+}
+.popupAnalytics .formAnalytics  .table-container Table {
+    margin-top: 4vw;
+    width: max-content; 
+}
+
+.popupAnalytics .formAnalytics Table th,
+.popupAnalytics .formAnalytics Table td {
+    border: 1px solid black;
+    padding: 0.6vw;
+    text-align: center;
+    font-size: 12px;
+}
+.popupAnalytics .formAnalytics Table th{
+    background-color: gray;
+    color: aliceblue;
+}
+
+@media print {
+    body {
+        background: white;
+        width: 100vw;
+    }
+    
+    nav, .buttons-container, .nav-icon, .Selection {
+        display: none;
+    }
+    .Dashboard {
+        display: none;
+    }
+    .DashboardTitle {
+        display: none;
+    }
+    .box {
+        background-color: none;
+        box-shadow: none;
+        margin-top: -350pt;
+        margin-left: 20pt;
+        
+    }
+    #loyalClientsChart {
+        position: relative;
+        left: 15vw;
+        width: 100%;
+        max-width: 50vw; 
+        max-height: 150pt; 
+    }
+    .box .allTransactions {
+        display: block;
+        margin-top: 50pt;
+    }
+    .box .allTransactions .clientTransactions h3{
+        font-size: 2vw;
+        margin-bottom: 2pt;
+    }
+
+    .box .allTransactions .clientTransactions table {
+        width: 100% !important; 
+        max-width: 380mm !important; 
+    }
+    .box .allTransactions table thead, .box .allTransactions Table td {
+        border: 1px solid black;
+        padding: 5px;
+        text-align: center;
+    }
+    .box .allTransactions  table thead tr th{
+        font-weight: bolder;
+        color: black;
+    }
+    .AnalyticsPrint{
+        display: none;  
+    }
+}
+/* Ipad */
+@media only screen and (min-width: 768px){
+    /* Nav Start */
+nav{
+    width: 0;
+    transition: width 0.3s; 
+}
+nav.open {
+    width: 30vw;
+}
+.logo{
+    padding: 1.4vw;
+    width: 100vw;
+    cursor: default;
+    user-select: none;
+}
+.logo img{
+    width: 10vw;
+    height: 10vw;
+    cursor: default;
+    user-select: none;
+}
+.logo span{
+    font-size: 2vw;
+    cursor: default;
+    user-select: none;
+}
+.logo span .usertype{
+    text-align: justify;
+    font-size: 1vw;
+}
+.nav-align{
+    margin-top: 3vw;
+}
+nav a{
+    width: 300px;
+    padding: 10px;
+
+}
+.icon{
+    width: 30px;
+    height: 30px;
+    margin-top: 0.7vw;
+   
+}
+.nav-item{
+    margin-top: 12px;
+    font-size: 2vw;
+    margin-left: 19px;
+}
+.nav-align a:hover{
+    background-color: aquamarine;
+    width: 25vw;
+}
+/* Side Nav end */
+/* Top Nav Start */
+.TopNav {
+    padding: 0.5vw;
+}
+.TopNav .nav-icon img {
+    height: 3vw;
+    margin-top: 0.2vw;
+}
+.logoname{
+    margin-top: 0.4vw;
+    cursor: default;
+    user-select: none;
+}
+.logoname img{
+    width: 5vw;
+    height: 5vw;
+    cursor: default;
+    user-select: none;  
+}
+.logoname span{
+    font-size: 2vw;
+    cursor: default;
+    user-select: none;
+}
+.Selection{
+    position: absolute;
+    right: 15vw;
+    margin-top: 1px;
+}
+.Selection li a{
+    font-size: 1.5vw;
+    margin-left: 2vw; 
+}
+/* Nav End */
+.Dashboard{
+    position: absolute;
+    top: 5vw;
+    left:10vw; 
+}
+.Dashboard .DashboardTitle{
+    font-size: 3vw;
+}
+.formbox{
+    position: relative;
+    top: 5vw;
+}
+.Dashboard .Items{
+    padding-top: 10px;
+    width:  24.5vw;
+    position: relative;
+}
+.Dashboard .Items.package {
+    background-color: #23eefc;
+}
+.Dashboard .Items.truck {
+    background-color: #fcd823;
+}
+.Dashboard .Items.staff {
+    background-color: #fc2344;
+}
+.Dashboard .Items img{
+    height: 6vw;
+    margin-left: 8vw;
+    margin-top: 2vw;
+    margin-bottom: auto;
+    cursor: default;
+    pointer-events: none;
+    user-select: none;
+}
+.Dashboard .Items .numbers{
+    position: relative;
+    left:8vw;
+    top: 7vw;
+    font-size: 4vw;
+    cursor: default;
+    pointer-events: none;
+    user-select: none;
+}
+.Dashboard .Items h3{
+    position: relative;
+    left: 3vw;
+    top: 7vw;
+    font-size: 2vw;
+    cursor: default;
+    pointer-events: none;
+    user-select: none;
+}
+.Dashboard .Items input {
+    margin-top: 2vw;
+    width:  24.5vw;
+    height: 3vw;
+    font-size: 2vw;
+}
+
+.box{
+    position: absolute;
+    top: 40vw;
+    left:9vw;
+    width: 77.4vw;
+}
+.box .TitleClient{
+    font-size: 2vw;
+   font-weight: bold;
+}
+.popupAnalytics .formAnalytics .IconcloseAnalytics img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 5vw;
+    height: 5vw;
+    z-index: 1;
+}
+.popupAnalytics .formAnalytics .title_transaction{
+    font-size: 2vw;    
+}
+
+.popupAnalytics .formAnalytics  .table-container {
+    overflow-x: auto; 
+    max-width: 100%;
+}
+.popupAnalytics .formAnalytics  .table-container Table {
+    margin-top: 4vw;
+    width: 100%; 
+}
+
+.popupAnalytics .formAnalytics Table th,
+.popupAnalytics .formAnalytics Table td {
+    font-size: 1.5vw;
+}
+}
+/* Desktop */
+@media only screen and (min-width: 1000px){
+    nav{
+        width: 0;
+        transition: 0.3s; 
+    }
+    nav.open {
+        width: 20vw;
+    }
+    .logo{
+        padding: 1.4vw;
+        width: 100vw;
+    }
+    .logo img{
+        width: 5vw;
+        height: 5vw;
+    }
+    .logo span{
+        font-size: 1.2vw;
+    }
+    .logo span .usertype{
+        text-align: justify;
+        font-size: 0.8vw;
+    }
+    .nav-align{
+        margin-top: 3vw;
+    }
+    nav a{
+        width: 300px;
+        padding: 10px;
+    
+    }
+    .icon{
+        width: 30px;
+        height: 30px;
+        margin-top: 0.7vw;
+       
+    }
+    .nav-item{
+        margin-top: 12px;
+        font-size: 1.2vw;
+        margin-left: 19px;
+    }
+    .nav-align a:hover{
+        background-color: aquamarine;
+        width: 25vw;
+    }
+    /* Side Nav end */
+    /* Top Nav Start */
+    .TopNav {
+        padding: 0.2vw;
+    }
+    .TopNav .nav-icon img {
+        height: 2vw;
+        margin-top: 0.2vw;
+        margin-left: 1vw;
+    }
+    .logoname{
+        margin-top: 0.1vw;
+    }
+    .logoname img{
+        width: 3vw;
+        height: 3vw;   
+    }
+    .logoname span{
+        font-size: 1.4vw;
+    }
+    .Selection{
+        position: absolute;
+        right: 6vw;
+        margin-top: 1px;
+    }
+    .Selection li a{
+        font-size: 1vw;
+        margin-left: 2vw; 
+    }
+    /* Nav End */
+    .Dashboard{
+        position: absolute;
+        top: 3vw;
+        left:10vw; 
+    }
+    .Dashboard .DashboardTitle{
+        font-size: 2vw;
+        font-weight: bold;
+    }
+    .formbox{
+        position: relative;
+        top: 3vw;
+    }
+    .Dashboard .Items{
+        position: relative;
+        left: -2vw;
+        width:  24.5vw;
+    }
+    .Dashboard .Items.package {
+        background-color: #23eefc;
+    }
+    .Dashboard .Items.truck {
+        background-color: #fcd823;
+    }
+    .Dashboard .Items.staff {
+        background-color: #fc2344;
+    }
+    .Dashboard .Items img{
+        position: relative;
+        top: -8vw;
+        height: 5vw;
+        margin-left: 8vw;
+        margin-bottom: auto;
+    }
+    .Dashboard .Items .numbers{
+        position: relative;
+        left:5vw;
+        top: 1vw;
+        font-size: 4vw;
+     
+    }
+    .Dashboard .Items h3{
+        position: relative;
+        left: 4vw;
+        top: 2vw;
+        font-size: 1.5vw;
+        margin-bottom: -2vw;
+    }
+    .Dashboard .Items input {
+        margin-top: -20vw;
+        width:  24.5vw;
+        height: 3vw;
+        font-size: 1.4vw;
+        
+    }
+    
+    .box{
+        position: absolute;
+        top: 25vw;
+        left:9vw;
+        width: 77.4vw;
+    }
+    .box .TitleClient{
+        font-size: 1.5vw;
+       font-weight: bold;
+    }
+    
+    .popupAnalytics .formAnalytics .IconcloseAnalytics img{
+        position: absolute;
+        /* top: vw; */
+        right: 0;
+        width: 3vw;
+        height: 3vw;
+        z-index: 1;
+    }
+    .popupAnalytics .formAnalytics .title_transaction{
+        font-size: 1.5vw;    
+    }
+    
+    .popupAnalytics .formAnalytics  .table-container {
+        overflow-x: auto; 
+        max-width: 100%; 
+    }
+    .popupAnalytics .formAnalytics  .table-container Table {
+        margin-top: 4vw;
+        width: 100%; 
+    }
+    
+    .popupAnalytics .formAnalytics Table th,
+    .popupAnalytics .formAnalytics Table td {
+        font-size: 1vw;
+    }
+}

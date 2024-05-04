@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; 
+}
+body{
+    background-image: url(logo/lastBackground.jpg) !important;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+header{
+    display: flex; 
+}
+.logo{  
+    display: flex;
+    padding: 1px;
+    margin-left: 10px;
+    font-style:initial;
+    color: whitesmoke;
+}
+.logo img{
+    width: 50px;
+    height: 50px;
+    margin-top: 15px;
+}
+.logo h2{
+    padding: 25px 10px;
+    font-size: 15px;
+    display: none;
+}
+.navigation ul{
+    display: flex;
+    position: absolute;
+    list-style-type: none;
+    right: 6vw;
+    margin-top: 1vw;
+}
+.navigation ul li a{
+    position: relative;
+    top: 22px;
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 3vw;
+    text-transform: uppercase;  
+}
+.navigation ul li a:after{
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: white;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+.navigation ul li a:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+.navigation ul li .signup{
+    margin-top: 20px;
+    width: 80px;
+    height: 30px;
+    margin-left: 3vw;
+    background: transparent;
+    border: 0.12vw solid white;
+    outline: none;
+    border-radius: 0.6vw;
+    cursor: pointer;
+    font-size: 10px;
+    color: white;
+    transition: .5s;
+    z-index: 20001;
+    
+}
+.navigation ul li .signup:hover{
+    background: white;
+    color: black;
+}
+.navigation ul li .menu{
+    display: none;
+}
+.respons-nav{
+    display: flex;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.locationbox {
+    position: absolute;
+    top: 100px;
+    left: 9vw;
+    height: auto;
+    width: 79.4vw;
+    border-radius: 6px;
+    padding: 30px;
+    background-color: rgba(0,0,0, 0.4); 
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    color: white;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    animation: fadeIn 1s ease-out 1; 
+    opacity: 1;
+}
+.locationbox h1{
+    text-align: center;
+}
+.locationbox iframe{
+    margin-top: 20px;
+    width: 100%;
+    height: 50vh;
+}
+.footer{
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0,0,0, 0.4); 
+    width:100%;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: block;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 0 20px;
+}
+
+.footer-content .footer-logo, .footer-contact, .footer-rights {
+    flex: 1;
+    text-align: center;
+}
+
+.footer-content .footer-logo {
+    display: flex;
+    align-items: center;  
+    justify-content: center;
+    padding: 1px;
+    font-style: initial;
+    color: whitesmoke;
+}
+
+.footer-content .footer-logo img {
+    width: 40px;
+    height: 40px;
+    margin: 10px 0; 
+}
+
+.footer-content .footer-logo h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0; 
+}
+
+.footer-contact {
+    font-size: 14px;
+}
+
+.footer-rights {
+    font-size: 12px;
+    opacity: 0.7;
+}
+/* Ipad */
+@media only screen and (min-width: 768px){
+    .logo img{
+        width: 70px;
+        height: 70px;
+        margin-top: 15px;
+    }
+    .logo h2{
+        font-size: 25px;
+        display: block;
+    }
+}
+/* Desktop */
+@media only screen and (min-width: 1000px){
+    body{
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    header{
+        display: flex;
+    }
+    .logo img{
+        margin-left: 10vw;
+        width: 3vw;
+        height: 3vw;
+        margin-top: 1vw;
+    }
+    .logo .logo1{
+        display:none;
+    }
+    .logo h2{
+        padding: 20px 25px 0 20px;
+        font-size: 1.5vw;
+    }
+
+    .navigation ul li a{
+    top: 10px;
+    margin-left: 1vw;
+    }
+
+    .navigation ul li .signup{
+        margin-top: 2px;
+        width: 130px;
+        height: 40px;
+        margin-left: 1vw;
+        font-size: 1.1em;
+        color: white;
+        transition: .5s;
+        z-index: 20001;    
+    }
+    .locationbox iframe{
+        width: 100%;
+        height: 60vh;
+    }
+    .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between; 
+        align-items: left;
+        padding: 0 20px;
+    }
+}

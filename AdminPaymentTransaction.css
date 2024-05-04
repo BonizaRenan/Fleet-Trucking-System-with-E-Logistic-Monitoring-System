@@ -1,0 +1,1500 @@
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+    *{
+        margin: 0;
+        padding: 0;
+        outline: none;
+        box-sizing: border-box;
+        list-style-type: none;
+        text-decoration: none;
+        font-family: 'Poppins', sans-serif; 
+    }
+    body{
+        background: linear-gradient(to right, #a3bded, #95b2e3, #86a7da, #789cd0, #6991c7); 
+    }
+/* Side Nav Start */
+nav{
+    position: fixed; 
+    height: 117%;
+    background: #ffffff;
+    width: 0;
+    overflow: hidden;
+    transition: all 0.2s linear;
+    box-shadow: 0 20px 35px (0,0,0, 0.1);
+    z-index: 2;
+    width: 0;
+    transition: width 0.3s; /* Optional: to animate the width change */
+}
+/* Open class for navMenu */
+nav.open {
+    width: 200px;
+}
+.logo{
+    display: flex;
+    transition: all 0.5s ease;
+    padding: 1.4vw;
+    width: 100vw;
+    background-color: rgba(23, 108, 255, 0.4); 
+}
+.logo img{
+    width: 50px;
+    height: 50px;
+    border-radius: 10vw;
+}
+.logo span{
+    font-weight: bold;
+    margin-left: 2vw;
+    text-align:left;
+    margin-top: 15px;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: rgb(0, 0, 0);
+}
+.logo span .usertype{
+    text-align: justify;
+    font-size: 6px;
+}
+.nav-align{
+    margin-top: 3vw;
+}
+nav a{
+    display: flex;
+    color: gray;
+    width: 300px;
+    padding: 10px;
+}
+.icon{
+    width: 30px;
+    height: 30px;
+    margin-top: 0.7vw; 
+}
+.nav-item{
+    margin-top: 12px;
+    font-size: 3vw;
+    margin-left: 19px;
+}
+.nav-align a:hover{
+    background-color: aquamarine;
+    width: 60vw;
+}
+/* Side Nav end */
+/* Top Nav Start */
+.TopNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #b3c7e6;
+    padding: 0.5vw;
+}
+.TopNav .nav-icon img {
+    height: 20px;
+    margin-top: 1vw;
+    cursor: pointer;
+}
+.logoname{
+    display: flex;
+    position: absolute;
+    left: 10vw;
+    margin-top: 1vw;
+}
+.logoname img{
+    width: 40px;
+    height: 40px;   
+     /*  */
+     cursor: default;
+     pointer-events: none;
+     /*  */    
+}
+.logoname span{
+    margin-top: 10px;
+    margin-left: 1px;
+    font-size: 15px;
+    font-weight: 600;
+    font-style: oblique;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+     /*  */
+     cursor: default;
+     pointer-events: none;
+     /*  */    
+}
+.Selection{
+    display: flex;
+    position: absolute;
+    list-style-type: none;
+    right: 6vw;
+    margin-top: 1px;
+}
+.Selection li a{
+    position: relative;
+    font-size: 10px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 5vw;
+    text-transform: uppercase;  
+}
+.Selection li a:after{
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: rgb(0, 0, 0);
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+.Selection li a:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+/* Nav End */
+    .Search{
+        position: absolute;
+        top: 7%;
+        right: 5%;
+        margin-bottom: 1vw;
+        z-index: -1;
+    }
+    .Search .Search_btn{
+        height: 20px;
+        width: 15vw;
+        outline: none;
+        color: #fff;
+        border: none;
+        font-size: 10px;
+        font-weight: 500;
+        border-radius: 2px;
+        letter-spacing: 1px;
+        background-color: gray;
+        cursor: pointer;
+    }
+    .Search .Search_Input{
+        height: 20px;
+        width: 30vw;
+        font-size: 10px;
+    }
+
+    .PaymentSelection{
+        position: absolute;
+        left: 2%;
+        top: 7.5%;
+        /* margin-bottom: 1vw; */
+        font-size: 2px;
+        z-index: -1;
+    }
+    .PaymentSelection select{
+        height: 20px;
+        width: 100%;
+        font-size: 10px;
+        cursor: pointer;
+    }
+
+    .box{
+        position: absolute;
+        top: 12%;
+        left:2%;
+        max-width: 93%;
+        height: auto;
+        width: 100%;
+        border-radius: 0.2vw;
+        padding: 30px;
+        background-color: #d9e8ff;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        z-index: -1;
+    }
+    .Payment_BTN {
+        position: absolute;
+        top: 1vw;
+        right: 2vw;
+        z-index: 2;
+
+    }
+    .Payment_BTN input{
+        height: 20px;
+        width: auto;
+        padding: 0.3vw;
+        outline: none;
+        color: #fff;
+        border: none;
+        font-size: 12px;
+        font-weight: 500;
+        border-radius: 3px;
+        letter-spacing: 1px;
+        background-color: gray;
+        cursor: pointer;
+    }
+    .Payment_BTN input:hover{
+        background-color: rgb(66, 66, 66);
+    }
+
+    .box .title {
+        position: relative;
+        font-size: 15px;
+        /* top: 10px; */
+        font-weight: 500;
+        cursor: default;
+        user-select: none;
+        pointer-events: none;
+    }
+    .box .title::before{
+        content: '';
+        position: absolute;
+        height: 3px;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background: linear-gradient(90deg, rgba(108,228,125,1) 0%, rgba(8,26,144,1) 100%);
+    }
+    .box .table-container {
+        overflow-x: auto; 
+        max-width: 100%;
+        position: relative;
+        top: 20px;
+    }
+    .box .Table {
+        width: max-content; 
+    }
+
+    .box .Table th,
+    .box .Table td {
+        border: 1px solid black;
+        padding: 0.6vw;
+        text-align: center;
+        font-size: 12px;
+        
+    }
+    .box .Table th{
+        background-color: gray;
+        color: aliceblue;
+    }
+    tr td a{
+        outline: none;
+        color: #fff;
+        border: none;
+        padding: 0.4vw;
+        font-weight: 500;
+        border-radius: 3px;
+        letter-spacing: 1px;
+        /* background-color: gray; */
+    }
+    tr td .Show {
+        background-color: gray;
+            
+    }
+
+    .Show_Popup{
+        position: absolute;
+        top: 12%;
+        left:2%;
+        justify-content: center;
+        align-items: center;
+        display: flex;  
+    }
+    .Show_Popup .add_form{
+        height: 500px;  /* or whatever height you desire */
+        width: 95vw;
+        background-color: #d9e8ff;
+        border: 2px solid rgba(255, 255, 255, .5);
+        border-radius: 10px;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+        position: relative;
+        overflow: hidden;
+        overflow-y: scroll;
+        
+    }
+    .Show_Popup .add_form .Iconclose img{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 30px;
+        height: 30px;
+        z-index: 1;
+        cursor: pointer;
+    }
+    .Show_Popup .add_form .title_Review{
+        position: relative;
+        margin-top: 1vw;
+        margin-left: 0.3vw;
+        margin-right: 0.3vw;
+        font-size: 20px;
+        font-weight: bold;       
+    }
+    .Show_Popup .add_form .title_Review::before{
+        content: '';
+        position: absolute;
+        height: 3px;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background: linear-gradient(90deg, rgba(108,228,125,1) 0%, rgba(8,26,144,1) 100%);
+    }
+
+    .package_profile{
+        margin-top: 1vw;
+        display: block;
+    }
+    .imagePreview {
+        position: relative;
+        margin-left: 1vw;
+        width: 40%;
+        height: 35vw;
+        overflow: hidden;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    .imagePreview:hover .arrow {
+        display: block; /* Show arrows on hover */
+    }
+
+    .imagePreview .slides {
+        display: flex;
+        transition: transform 0.3s ease-in-out;
+        width: 100%;      /* Ensures slides container takes full width of .imagePreview */
+        height: 100%;     /* Ensures slides container takes full height of .imagePreview */
+    }
+
+    .imagePreview .slide {
+        flex: 0 0 100%;    /* Ensures each slide takes full width of .slides container */
+        height: 100%;      /* Ensures each slide takes full height of .slides container */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: none; 
+    }
+
+    .imagePreview .slide.active { 
+        display: block;
+    }
+
+    .arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+        background-color: rgba(255, 255, 255, 0.7);
+        text-align: center;
+        line-height: 20px;
+        border-radius: 50%;
+    }
+
+    .arrow.left {
+        left: 5px;
+        
+    }
+
+    .arrow.right {
+        right: 5px;
+    }
+
+    .arrow:hover {
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+    }
+
+    .PackageInfo{
+        /* position: absolute;
+        left: 20vw; */
+        font-size: 12px;
+    }
+    .PackageInfo .desc1{
+        font-size: 15px;
+        font-weight: 500;
+        position: relative;
+        margin-top: 5px;
+        margin-bottom: -5px;
+    }
+    .PackageInfo .desc1::before{
+        content: '';
+        position: absolute;
+        height: 3px;
+        left: 0;
+        bottom: 0;
+        width:100%;
+        background: black;
+    }
+    .PackageInfo p{
+        padding-bottom: 0.5vw;
+    }
+
+    .Personal_Info2{
+        display: none;
+    }
+
+    .Personal_Info1{
+        font-size: 12px;
+    }
+    .Personal_Info1 p{
+        padding-bottom: 0.5vw;
+    }
+    .Personal_Info1 .desc2{
+        font-size: 15px;
+        font-weight: 500;
+        position: relative;
+        margin-top: 5px;
+        margin-bottom: -5px;
+    }
+    .Personal_Info1 .desc2::before{
+        content: '';
+        position: absolute;
+        height: 3px;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background: black;
+    }
+
+    .PaymentMethod{
+        /* position: absolute;
+        left: 50vw; */
+        font-size: 12px;
+    }
+
+    .PaymentMethod .desc1{
+        font-size: 15px;
+        font-weight: 500;
+        position: relative;
+        margin-top: 5px;
+        margin-bottom: -5px;
+    }
+    .PaymentMethod .desc1::before{
+        content: '';
+        position: absolute;
+        height: 3px;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background: black;
+    }
+    .PaymentMethod p{
+        padding-bottom: 0.5vw;
+    }
+
+    .ImageTransaction {
+        position: relative;
+        margin-left: 1vw;
+        margin-right: -4vw;
+        width: 31vw;
+        height: 51vw;
+        overflow: hidden;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ImageTransaction .slides-container {
+        flex: 1;
+        display: flex;
+    }
+
+    .ImageTransaction .slide {
+        flex: 1;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: none;
+    }
+
+    .ImageTransaction .arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-90%);
+        font-size: 15px; /* Adjust the font size as needed */
+        color: #594c4c; 
+        cursor: pointer;
+        
+
+    }
+    
+    .ImageTransaction .arrow.left {
+        left: 10px;
+        
+    }
+    
+    .ImageTransaction .arrow.right {
+        right: 10px;
+    }
+
+    
+    .user-details{
+        display: block;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .user-details .input-box{
+        padding-top: 10px;
+    }
+    .user-details .input-box .details{
+        display: block;
+        font-weight: bolder;
+    }
+
+    .user-details .input-box input{
+        height: 37px;
+        width: 90%;
+        outline: none;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        padding-left: 15px;
+        font-size: 3vw;
+        border-bottom-width: 3px;
+        transition: all 0.3s ease;
+    }
+    .user-details .input-box input:focus,
+    .user-details .input-box input:valid{
+        border-color: gray;
+    }
+
+    .button{
+        height: 30px;
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .button span{
+        font-size: 2vw;
+    }
+    .button input{
+        height: 100%;
+        width: 40%;
+        outline: none;
+        color: #fff;
+        border: none;
+        font-size: 3vw;
+        font-weight: 500;
+        border-radius: 5px;
+        letter-spacing: 1px;
+        cursor: pointer;
+    }
+    .imagetransac{
+        height: 100%;
+        width: auto;
+        outline: none;
+        color: #fff;
+        border: none;
+        font-size: 2vw;
+        font-weight: 500;
+        border-radius: 5px;
+        letter-spacing: 1px;
+        cursor: pointer;
+        padding-left: 6px;
+        padding-right: 6px;
+        background-color: gray;
+    }
+
+    .button #Accept{
+        background-color: rgb(41, 186, 39);
+    }
+    .button #Accept:hover{
+        background-color: rgb(37, 134, 85);
+    }
+
+    .button #Decline{
+        background-color:red;
+    }
+    .button #Decline:hover{
+        background-color: rgb(198, 1, 1);
+    }
+    .Show_PopupImg{
+        position: absolute;
+        top: 12%;
+        left:2%;
+        justify-content: center;
+        align-items: center;
+        display: none;  
+    }
+
+    .Show_PopupImg .add_form{
+        height: 500px;  /* or whatever height you desire */
+        width: 95vw;
+        background-color: #d9e8ff;
+        border: 2px solid rgba(255, 255, 255, .5);
+        border-radius: 10px;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+        position: relative;
+        overflow: hidden;
+        overflow-y: auto;
+        
+    }
+    .Show_PopupImg .add_form .Icon_close img{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 30px;
+        height: 30px;
+        z-index: 4;
+        cursor: pointer;
+    }
+    .Show_PopupImg .add_form .title_Review{
+        position: relative;
+        margin-top: 1vw;
+        margin-left: 0.3vw;
+        margin-right: 0.3vw;
+        font-size: 20px;
+        font-weight: bold;       
+    }
+    .Show_PopupImg .add_form .title_Review::before{
+        content: '';
+        position: absolute;
+        height: 3px;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background: linear-gradient(90deg, rgba(108,228,125,1) 0%, rgba(8,26,144,1) 100%);
+    }
+    .Show_PopupImg .add_form .table-container {
+        overflow-x: auto;
+        width: 90%;
+        max-width: 100%;
+        position: relative;
+        top: 20px;
+        margin: auto; /* Center the table horizontally */
+        /* left: 20px; */
+    }
+
+    .Show_PopupImg .add_form .Table {
+        width: 100%; 
+        margin: auto; /* Center the table horizontally */
+    }
+
+    .Show_PopupImg .add_form .Table th,
+    .Show_PopupImg .add_form .Table td {
+        border: 1px solid black;
+        padding: 0.6vw;
+        text-align: center;
+        font-size: 12px;
+        
+    }
+    .Show_PopupImg .add_form .Table th{
+        background-color: gray;
+        color: aliceblue;
+    }
+    .Show_PopupImg .add_form tr td button {
+        outline: none;
+        color: #fff;
+        border: none;
+        padding: 0.4vw;
+        font-weight: 500;
+        border-radius: 3px;
+        letter-spacing: 1px;
+        cursor: pointer;
+    }
+    
+    .Show_PopupImg .add_form tr td .Accept {
+        background-color: rgb(6, 200, 71);
+    }
+    
+    .Show_PopupImg .add_form tr td .Accept:hover {
+        background-color: rgb(3, 167, 57);
+    }
+    
+    .Show_PopupImg .add_form tr td .Decline {
+        background-color: red;
+    }
+    
+    .Show_PopupImg .add_form tr td .Decline:hover {
+        background-color: rgb(185, 7, 7);
+    }
+    
+    .Show_PopupImg .add_form tr td img{
+        height: 40vw;
+    }
+   
+
+
+
+    /* Styles for the success pop-up */
+.popupsuccess {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: opacity 0.5s;
+    z-index: 999;
+}
+
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+}
+
+.popup-message {
+    font-size: 8px;
+    padding: 10px;
+}
+
+.popupsuccess.fade-out {
+    animation: fadeOut 0.5s;
+    opacity: 0;
+}
+
+.checkmark-icon {
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.Decline_Popup{
+    position: absolute;
+    top: 12%;
+    left:2%;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    z-index: 5;
+}
+.Decline_Popup .Decline_case{
+    height: 150px;  /* or whatever height you desire */
+    width: 93vw;
+    background-color: #d9e8ff !important;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 10px;
+    /* backdrop-filter: blur(50px); */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+.Decline_Popup .Decline_case .title_Decline{
+    position: relative;
+    margin-top: .4vw;
+    margin-left: 0.3vw;
+    margin-right: 0.3vw;
+    font-size: 15px;
+    font-weight: bold;     
+}
+.Decline_Popup .Decline_case .title_Decline::before{
+    content: '';
+    position: absolute;
+    height: 3px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(108,228,125,1) 0%, rgba(8,26,144,1) 100%);
+}
+
+.descript_Decline{
+    position: relative;
+    top: 3vw;
+    left: 2vw;
+    right: 2vw; 
+    padding-right: 2vw;
+    font-size:4mm;
+}
+.descript_Decline input{
+    height: 37px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 3px;
+    transition: all 0.3s ease;
+}
+
+.descript_Decline input:focus,
+.descript_Decline input:valid{
+    border-color: gray;
+}
+
+.Decline_btn button{
+    padding: .1vw .6vw ;
+    font-size: 13px;
+    border: none;
+    border-radius: 3px;
+}
+.Decline_btn .close{
+    background-color: #8b8a8caa;
+    color: white;
+    position:absolute;
+    right: 5px;
+    bottom: 10px;
+}
+.Decline_btn .Decline{
+    background-color: #ff0000aa;
+    color: white;
+    position:absolute;
+    right: 50px;
+    bottom: 10px;
+}
+.Decline_btn .close:hover{
+    background-color: #8b8a8c;
+    color: white;
+}
+.Decline_btn .Decline:hover{
+    background-color: #ff0000;
+    color: white;
+}
+/* Tablet */
+@media only screen and (min-width: 768px){
+    /* Nav Start */
+    nav{
+        width: 0;
+        transition: width 0.3s; 
+    }
+    nav.open {
+        width: 30vw;
+    }
+    .logo{
+        padding: 1.4vw;
+        width: 100vw;
+    }
+    .logo img{
+        width: 10vw;
+        height: 10vw;
+    }
+    .logo span{
+        font-size: 2vw;
+    }
+    .logo span .usertype{
+        text-align: justify;
+        font-size: 1vw;
+    }
+    .nav-align{
+        margin-top: 3vw;
+    }
+    nav a{
+        width: 300px;
+        padding: 10px;
+    }
+    .icon{
+        width: 30px;
+        height: 30px;
+        margin-top: 0.7vw;
+    
+    }
+    .nav-item{
+        margin-top: 12px;
+        font-size: 2vw;
+        margin-left: 19px;
+    }
+    .nav-align a:hover{
+        background-color: aquamarine;
+        width: 25vw;
+    }
+    /* Side Nav end */
+    /* Top Nav Start */
+    .TopNav {
+        padding: 0.5vw;
+    }
+    .TopNav .nav-icon img {
+        height: 3vw;
+        margin-top: 0.2vw;
+    }
+    .logoname{
+        margin-top: 0.4vw;
+    }
+    .logoname img{
+        width: 5vw;
+        height: 5vw;   
+    }
+    .logoname span{
+        font-size: 2vw;
+    }
+    .Selection{
+        position: absolute;
+        right: 15vw;
+        margin-top: 1px;
+    }
+    .Selection li a{
+        font-size: 1.5vw;
+        margin-left: 2vw; 
+    }
+    /* Nav End */
+    .Search{
+        position: absolute;
+        top:8vw;
+    }
+    .Search .Search_btn{
+        height: 30px;
+        width: 100px;
+        font-size: 15px;
+    }
+    .Search .Search_Input{
+        height: 30px;
+        width: 200px;
+        font-size: 15px;
+    }
+    .PaymentSelection{
+        position: absolute;
+        left: 2%;
+        top:8vw;
+    }
+    .PaymentSelection select{
+        height: 30px;
+        width: 250px;
+        font-size: 12px;
+    }
+    /* */
+    .box{
+        position: absolute;
+        top:13vw;
+        left:2%;
+    }
+    .Payment_BTN input{
+        height: 30px;
+        font-size: 15px;
+    }
+    .Payment_BTN input:hover{
+        background-color: rgb(66, 66, 66);
+    }
+    .box .title {
+        font-size: 25px;
+    }
+    
+    .box .Table th,
+    .box .Table td {
+        font-size: 15px;
+        
+    }
+    
+    .Show_Popup{
+        top:13vw;
+    }
+    .Show_Popup .add_form{
+        height: 800px;  /* or whatever height you desire */
+        width: 93vw;
+        
+    }
+    .Show_Popup .add_form .Iconclose img{
+        width: 40px;
+        height: 40px;
+    }
+    .Show_Popup .add_form .title_Review{
+        font-size: 25px;
+    }
+    .package_profile{
+        margin-top: 1vw;
+    }
+    .PackageInfo{
+        font-size: 20px;
+    }
+    .PackageInfo .desc1{
+        font-size: 22px;
+        margin-bottom: -20px;
+    }
+    .PaymentMethod{
+        /* position: absolute;
+        left: 50vw; */
+        font-size: 20px;
+        margin-top: 20px;  
+    }
+    .PaymentMethod .desc1{
+        font-size: 22px;
+        margin-bottom: -20px;
+    }
+    .Personal_Info1{
+        font-size: 20px;
+    }
+    .Personal_Info1 p{
+        padding-bottom: 0.5vw;
+    }
+    .Personal_Info1 .desc2{
+        font-size: 22px;
+        margin-bottom: -20px;
+    }
+    .button{
+        text-align: center;
+        height:30px;
+        
+    }
+    .button span{
+        font-size: 2vw;
+    }
+    .button input{
+    height: 120%;
+    width: 40%;
+    font-size: 2vw;
+
+    }
+    .imagetransac{
+        height: 120%;
+        width: auto;
+        font-size: 2vw;
+    }
+
+    .Show_PopupImg{
+        top:13vw;
+    }
+    .Show_PopupImg .add_form{
+        height: 800px;  /* or whatever height you desire */
+        width: 93vw;
+        
+    }
+    .Show_PopupImg .add_form .Icon_close img{
+        width: 40px;
+        height: 40px;
+    }
+    .Show_PopupImg .add_form .title_Review{
+        font-size: 25px;
+    }
+    .Show_PopupImg .add_form .Table th,
+    .Show_PopupImg .add_form .Table td {
+        font-size: 15px;
+        
+    }
+    .Show_PopupImg .add_form tr td img{
+        height: 30vw;
+    }
+    /* success pop up */
+    .popup-message {
+        font-size: 18px;
+        padding: 10px;
+    }
+    .Decline_btn button{
+        font-size: 15px;
+        border-radius: 5px;
+    }
+    .Decline_btn .close{
+        right: 5px;
+        bottom: 10px;
+    }
+    .Decline_btn .Decline{
+        right: 60px;
+        bottom: 10px;
+    }
+        
+    }
+/* Desktop */
+@media only screen and (min-width: 1000px){
+    nav{
+        width: 0;
+        transition: 0.3s; 
+    }
+    nav.open {
+        width: 20vw;
+    }
+    .logo{
+        padding: 1.4vw;
+        width: 100vw;
+    }
+    .logo img{
+        width: 5vw;
+        height: 5vw;
+    }
+    .logo span{
+        font-size: 1.2vw;
+    }
+    .logo span .usertype{
+        text-align: justify;
+        font-size: 0.8vw;
+    }
+    .nav-align{
+        margin-top: 3vw;
+    }
+    nav a{
+        width: 300px;
+        padding: 10px;
+    
+    }
+    .icon{
+        width: 30px;
+        height: 30px;
+        margin-top: 0.7vw;
+    
+    }
+    .nav-item{
+        margin-top: 12px;
+        font-size: 1.2vw;
+        margin-left: 19px;
+    }
+    .nav-align a:hover{
+        background-color: aquamarine;
+        width: 25vw;
+    }
+    /* Side Nav end */
+    /* Top Nav Start */
+    .TopNav {
+        padding: 0.2vw;
+    }
+    .TopNav .nav-icon img {
+        height: 2vw;
+        margin-top: 0.2vw;
+        margin-left: 1vw;
+    }
+    .logoname{
+        margin-top: 0.1vw;
+    }
+    .logoname img{
+        width: 3vw;
+        height: 3vw;   
+    }
+    .logoname span{
+        font-size: 1.4vw;
+    }
+    .Selection{
+        position: absolute;
+        right: 6vw;
+        margin-top: 1px;
+    }
+    .Selection li a{
+        font-size: 1vw;
+        margin-left: 2vw; 
+    }
+    /* Nav End */
+    .Search{
+        position: absolute;
+        top:6vw;
+    }
+    .Search .Search_btn{
+        height: 30px;
+        width: 100px;
+        font-size: 15px;
+    }
+    .Search .Search_Input{
+        height: 30px;
+        width: 260px;
+        font-size: 15px;
+    }
+    .PaymentSelection{
+        position: absolute;
+        left: 2%;
+        top:6vw;
+    }
+    .PaymentSelection select{
+        height: 30px;
+        width: 300px;
+        font-size:15px;
+    }
+    .box{
+        position: absolute;
+        top:9.5vw;
+        left:2%;
+    }
+    .box .title {
+        font-size: 2vw;
+    }
+    .box .table-container {
+        max-width: 100%;  
+    }
+    
+    .box .Table {      
+        max-width: 100%;    
+    }
+        
+    .box .Table th,
+    .box .Table td {
+        border: 1px solid black;
+        padding: 0.6vw;
+        text-align: center;
+        font-size: 0.8vw;
+    }
+    .Show_Popup{
+        position: absolute;
+        top: 3vw;
+        left: 8vw;
+    }
+    .Show_Popup .add_form{
+        height: 46vw;
+        width: 80vw;
+        overflow: hidden;
+        overflow-y: none;
+    }
+    .Show_Popup .add_form .Iconclose img{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 3vw;
+        height: 3vw;
+        z-index: 1;
+    }
+    .Show_Popup .add_form .title_Review{
+        position: relative;
+        margin-top: 1vw;
+        font-size: 1.6vw;  
+    }
+    .Show_Popup .add_form .title_Review::before{
+        height: 3px;
+    }
+    .package_profile{
+        margin-top: 1vw;
+        display: flex;
+    }
+    .imagePreview {
+        width: 15vw;
+        height: 15vw;
+    }
+    
+    .imagePreview .slides {
+        display: flex;
+        transition: transform 0.3s ease-in-out;
+        width: 150px;      /* Matches the parent's width */
+    }
+    
+    .imagePreview .slide {
+        flex: 0 0 15vw; /* Matches the parent's width */
+        height: 15vw;
+    }
+    
+    .imagePreview .slide.active { 
+        display: block;
+    }
+    .PackageInfo{
+        position: absolute;
+        left: 20vw;
+        right: auto;
+        font-size: 1.1vw;
+    }
+    .PackageInfo .desc1{
+        font-size: 1.6vw;
+        font-weight: 500;
+        position: relative;
+    }
+    .PackageInfo .desc1::before{
+        content: '';
+        position: absolute;
+        height: 3px;
+        left: 0;
+        bottom: 0;
+        width: 105%;
+        background: black;
+    }
+    .PackageInfo p{
+        padding-bottom: 0.5vw;
+    }
+    .Personal_Info1{
+        display: none;
+    }
+    
+    .PaymentMethod{
+        position: absolute;
+        top: 2.9vw;
+        left: 50vw;
+        right: auto;
+        font-size: 1.1vw;
+    }
+    .PaymentMethod .desc1{
+        font-size: 1.6vw;
+        font-weight: 500;
+        position: relative;
+    }
+    .PaymentMethod .desc1::before{
+        height: 2.5px;
+    }
+    .PaymentMethod p{
+        padding-bottom: 0.5vw;
+    }
+    .Personal_Info2{
+        display: block;
+    }
+    .Personal_Info2 .desc2{
+        font-weight: 500;
+        position: relative;
+    }
+    .Personal_Info2 .desc2::before{
+        content: '';
+        position: absolute;
+        height: 3px;
+        left: 0;
+        bottom: 0;
+        width: 50%;
+        background: black;
+    }
+    .Personal_Info2{
+        font-size: 1.1vw;
+    }
+    .Personal_Info2 p{
+        padding-bottom: 0.5vw;
+    }
+    .Personal_Info2 .desc2{
+     font-size: 1.6vw;
+     margin-bottom: -20px;
+    }
+/*  */
+    .ImageTransaction {
+        width: 11vw;
+        height: 22vw;
+    }
+
+    .user-details{
+        display: block;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .user-details .input-box{
+        padding-top: 10px;
+    }
+    
+    .user-details .input-box input{
+        height: 2vw;
+        width: 120%;
+        font-size: 1vw;
+    }
+    
+    .button{
+        text-align: center;
+        height:30px;
+        margin-top: 4px;
+        
+    }
+    
+    .button span{
+        font-size: 1vw;
+    }
+    .button input{
+    height: 120%;
+    width: 20%;
+    outline: none;
+    color: #fff;
+    border: none;
+    font-size: 1.2vw;
+    font-weight: 500;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    background-color: gray;
+    }
+   
+    .Decline_Popup{
+        position: absolute;
+        top: 12vw;
+        left: 20vw;
+    }
+    .Decline_Popup .Decline_case{
+        height: 15vw;
+        width: 50vw;
+        border-radius: 10px;
+
+    }
+
+    .Decline_Popup .Decline_case .title_Decline{
+        position: relative;
+        margin-top: .4vw;
+        margin-left: 0.3vw;
+        margin-right: 0.3vw;
+        font-size: 2vw;
+        font-weight: 500;     
+    }
+    .Decline_Popup .Decline_case .title_Decline::before{
+        content: '';
+        position: absolute;
+        height: 3px;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background: linear-gradient(90deg, rgba(108,228,125,1) 0%, rgba(8,26,144,1) 100%);
+    }
+    .descript_Decline{
+        position: absolute;
+        top: 5vw;
+        left: 2vw;
+        right: 2vw;
+        font-size: 1.5vw;
+    }
+    .descript_Decline input{
+        height: 50px;
+        width: 100%;
+        outline: none;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        padding-left: 15px;
+        font-size: 16px;
+        border-bottom-width: 3px;
+        transition: all 0.3s ease;
+    }
+    
+    .Decline_btn button{
+        font-size: 20px;
+        border-radius: 5px;
+    }
+    .Decline_btn .close{
+        right: 5px;
+        bottom: 10px;
+    }
+    .Decline_btn .Decline{
+        right: 90px;
+        bottom: 10px;
+    }
+    .Show_PopupImg{
+        position: absolute;
+        top: 6vw;
+        left: 18vw;
+    }
+    .Show_PopupImg .add_form{
+        height: 36vw;
+        width: 60vw;
+        /* overflow: hidden; */
+        /* overflow-y: none; */
+        position: relative;
+        z-index: 4;
+    }
+    .Show_PopupImg .add_form .Icon_close img{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 3vw;
+        height: 3vw;
+        z-index: 4;
+    }
+    .Show_PopupImg .add_form .title_Review{
+        position: relative;
+        margin-top: 1vw;
+        font-size: 1.6vw;  
+    }
+    .Show_PopupImg .add_form .title_Review::before{
+        height: 3px;
+    }
+    .Show_PopupImg .add_form  .table-container {
+        max-width: 100%;  
+    }
+    
+    .Show_PopupImg .add_form  .Table {   
+        width: 80%;   
+        /* max-width: 100%;     */
+    }
+        
+    .Show_PopupImg .add_form  .Table th,
+    .Show_PopupImg .add_form  .Table td {
+        border: 1px solid black;
+        padding: 0.6vw;
+        text-align: center;
+        font-size: 0.8vw;
+    }
+    .Show_PopupImg .add_form tr td img{
+        height: 15vw;
+    }
+   
+    .imagetransac{
+        height: 120%;
+        width: auto;
+        outline: none;
+        color: #fff;
+        border: none;
+        font-size: 1vw;
+        font-weight: 500;
+        border-radius: 5px;
+        letter-spacing: 1px;
+        background-color: gray;
+        padding-left: 6px;
+        padding-right: 6px;
+        cursor: pointer;
+        }
+}

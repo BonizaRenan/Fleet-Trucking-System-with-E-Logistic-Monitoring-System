@@ -1,0 +1,1361 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif; 
+}
+body{
+    background: linear-gradient(to right, #a3bded, #95b2e3, #86a7da, #789cd0, #6991c7);
+}
+
+/* Top Nav Start */
+.TopNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #b3c7e6;
+    padding: 20px;
+}
+.TopNav .nav-icon img {
+    height: 20px;
+    margin-top: 1vw;
+}
+.logoname{
+    display: flex;
+    position: absolute;
+    left: 4vw;
+    margin-top: 1vw;
+}
+.logoname img{
+    width: 40px;
+    height: 40px;   
+     /*  */
+     cursor: default;
+     pointer-events: none;
+     /*  */    
+}
+.logoname span{
+    margin-top: 10px;
+    margin-left: 1px;
+    font-size: 15px;
+    font-weight: 600;
+    font-style: oblique;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+     /*  */
+     cursor: default;
+     pointer-events: none;
+     /*  */    
+}
+.Selection{
+    display: flex;
+    position: absolute;
+    list-style-type: none;
+    right: 12vw;
+    margin-top: 1px;
+}
+.Selection li a{
+    position: relative;
+    font-size: 10px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 5vw;
+    text-transform: uppercase;  
+}
+.Selection li a:after{
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: rgb(0, 0, 0);
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+.Selection li a:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+/* Nav End */
+
+.container{
+    position: absolute;
+    top: 6%;
+    left: 10vw;
+    right: 20vw;
+    max-width: 80vw;
+    width: 100%;
+    border-radius: 6px;
+    padding: 30px;
+    background-color: #d9e8ff !important;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+.container .backbtn{
+    display: flex;
+    justify-content: flex-end;
+}
+.container .backbtn input{
+    height: 20px;
+    width:50px;
+    outline: none;
+    color: #fff;
+    border: none;
+    font-size: 8px;
+    font-weight: 500;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    background-color: gray;
+}
+.container .backbtn input:hover{
+    background-color: #413e42;
+}
+
+.container .title{
+    font-size: 20px;
+    font-weight: 500;
+    position: relative;
+   
+}
+/* .container .flexcontainer{
+    display: flex;
+} */
+
+.container .title::before{
+    content: '';
+    position: absolute;
+    height: 3px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(108,228,125,1) 0%, rgba(8,26,144,1) 100%);
+}  
+/* .container .title2{
+    
+    font-size: 20px;
+    margin-top: 1.5vw;
+    font-weight: 500;
+    position: relative;
+   
+} */
+.uploadimage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.container .imagePreview {
+    position: relative;
+    width: 150px;       
+    height: 150px;      
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    
+}
+.container .imagePreview img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: auto;
+}
+.container .imagePreview .defaultImage {
+    position: absolute;  
+    top: 0;            
+    left: 0;             
+    z-index: 1;      
+}
+
+.container .imagePreview .profileImage {
+    display: flex;         
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    position: relative;  
+    z-index: 2;       
+}
+
+.container .user-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.container .user-details .input-box{
+    width: calc(100%/ 1 - 30px);
+}
+.container .user-details .input-box .details{
+    display: block;
+    font-weight: 1000;
+    font-size: 14px;
+}
+.container .user-details .input-box span p{
+    /* height: 37px; */
+    width: auto;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 2px;
+    font-size: 10px;
+    border-bottom-width: 3px;
+    transition: all 0.3s ease;
+}
+
+.button{
+    height: 30px;
+    margin: 30px 0;
+    text-align: center;
+}
+.button input{
+    height: 100%;
+    width: 50%;
+    outline: none;
+    color: #fff;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    background-color: gray;
+}
+.button input:hover{
+    background-color: #413e42;
+
+}
+/* showpopup */
+.show_Update{
+    position: absolute;
+    top: 6%;
+    left: 5vw;
+    justify-content: center;
+    align-items: center;
+    /* display:none; */
+    display: flex; 
+    z-index: 3;
+}
+.show_Update .show_form{
+    height: auto;
+    width: 90vw;
+    background-color: #d9e8ff;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 10px;
+    backdrop-filter: blur(50px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+    
+}
+.show_Update .show_form .Iconclose img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    z-index: 1;
+}
+.show_Update .show_form .title_Update{
+    position: relative;
+    margin-top: 1vw;
+    margin-left: 0.3vw;
+    margin-right: 0.3vw;
+    font-size: 20px;
+    font-weight: bold;        
+}
+.show_Update .show_form .title_Update::before{
+    content: '';
+    position: absolute;
+    height: 3px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(108,228,125,1) 0%, rgba(8,26,144,1) 100%);
+}
+
+.show_Update .show_form .split_show{
+    display: block;
+    margin: 1vw 1vw 0 1vw;  
+}
+.show_Update .show_form .Show_left{
+    border-style:groove;
+    height: auto;
+    width: 100%;
+    padding: 1vw;
+    /* padding: 0vw 28.8vw 0 0; */
+    /* display: flex; */
+}
+.show_Update .show_form .Show_left .uploadimage_Update{
+    display: flex;           /* Add Flexbox */
+    flex-direction: column;  /* Stack children vertically */
+    align-items: center;     /* Center vertically */
+    justify-content: center; /* Center horizontally */
+}
+
+.show_Update .show_form .Show_left .profile_title{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.show_Update .show_form .Show_left .imagePreview {
+    position: relative;
+    width: 150px;       
+    height: 150px;      
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+}
+.show_Update .show_form .Show_left .imagePreview img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: auto;
+}
+
+.show_Update .show_form .Show_left .imagePreview .defaultImage {
+    position: absolute;
+    top: 0;        
+    left: 0;  
+    z-index: 1;     
+}
+
+.show_Update .show_form .Show_left .imagePreview .profileImage {
+    display: flex;     
+    flex-direction: column; 
+    align-items: center;   
+    justify-content: center; 
+    position: relative;  
+    z-index: 2;   
+}
+
+.show_Update .show_form .Show_left .user-details1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.show_Update .show_form .Show_left .user-details1 .input-box{
+    width: calc(100%/ 1 - 30px);
+}
+.show_Update .show_form .Show_left .user-details1 .input-box .details{
+    display: block;
+    font-weight: 1000;
+    font-size: 14px;
+}
+.show_Update .show_form .Show_left .user-details1 .input-box span p{
+    /* height: 37px; */
+    width: auto;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 2px;
+    font-size: 12px;
+    border-bottom-width: 3px;
+    transition: all 0.3s ease;
+}
+
+/* SHOW RIGHT */
+.show_Update .show_form .Show_right{
+    border-style:groove;
+    height: auto;
+    width: 100%;
+    padding: 1vw;
+}
+.show_Update .show_form .Show_right .profile_title{
+    font-size: 20px;
+    font-weight: bold;
+}
+.show_Update .show_form .Show_right .uploadimage_Update{
+    display: flex;  
+    flex-direction: column;  
+    align-items: center;  
+    justify-content: center;
+}
+
+.show_Update .show_form .Show_right .imagePreview_update {
+    position: relative;
+    width: 150px;       
+    height: 150px;      
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    z-index: 3;
+}
+.show_Update .show_form .Show_right .imagePreview_update img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: auto;
+}
+
+.show_Update .show_form .Show_right .imagePreview_update .defaultImage {
+    position: absolute;  /* Absolute positioning takes the image out of the normal flow */
+    top: 0;              /* Align to the top of the container */
+    left: 0;             /* Align to the left of the container */
+    z-index: 1;          /* Lower z-index ensures this is behind the profile image */
+}
+
+.show_Update .show_form .Show_right .imagePreview_update .profileImage {
+    display: flex;           /* Add Flexbox */
+    flex-direction: column;  /* Stack children vertically */
+    align-items: center;     /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    position: relative;  /* Absolute positioning takes the image out of the normal flow */
+    z-index: 2;          /* Higher z-index ensures this is in front of the default image */
+}
+
+
+.show_Update .show_form .Show_right .user-details1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0vw 1vw 0 1vw;  
+}
+.show_Update .show_form .Show_right .user-details1 .input-box{
+    width: calc(100%/ 1 - 30px);
+    
+}
+.show_Update .show_form .Show_right .user-details1 .input-box .details{
+    display: block;
+    font-weight: 1000;
+
+}
+.show_Update .show_form .Show_right  .user-details1 .input-box input{
+    height: 20px;
+    width: 100%;
+    outline: none;
+    border-radius: 2px;
+    border: 1px solid #ccc;
+    padding-left: 5px;
+    font-size: 12px;
+    border-bottom-width: 3px;
+    transition: all 0.3s ease;
+}
+.show_Update .show_form .Show_right  .user-details1 .input-box .changepass{
+    height: 20px;
+    width: 100%;
+    outline: none;
+    border-radius: 2px;
+    padding-left: 5px;
+    font-size: 12px;
+    border-bottom-width: 3px;
+    transition: all 0.3s ease;
+    background-color: gray;
+    color: white;
+}
+.show_Update .show_form .Show_right  .user-details1 .input-box .changepass:hover{
+    background-color: rgb(51, 49, 49);
+    color: white;
+}
+
+.show_Update .show_form .Show_right .user-details1 .input-box input:focus,
+.show_Update .show_form .Show_right .user-details1 .input-box input:valid{
+    border-color: gray;
+}
+.show_Update .show_form .Show_right .user-details1 .input-box .password_merge {
+    position: relative;
+    /* display: inline-block;  */
+}
+.show_Update .show_form .Show_right .user-details1 .input-box .password_merge .icon2{
+    position: absolute;
+    margin-top: 8px;
+    right: 1vw;
+    width: 10px;
+    color: #162938;
+    line-height: 57px;
+}
+.show_Update .show_form .Show_right .user-details1 .input-box .confirmpassword_merge {
+    position: relative;
+    /* display: inline-block;  */
+}
+.show_Update .show_form .Show_right .user-details1 .input-box .confirmpassword_merge .icon3{
+    position: absolute;
+    margin-top: 8px;
+    right: 1vw;
+    width: 10px;
+    color: #162938;
+    line-height: 57px;
+}
+.show_Update .show_form  .button{
+    height: 35px;
+    margin: 30px 0;
+    text-align: center;
+}
+.show_Update .show_form .button input{
+    height: 100%;
+    width: 40%;
+    outline: none;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    background-color: gray;
+}
+.show_Update .show_form .button input:hover{
+    background-color: #413e42;
+
+}
+/* Styles for the success pop-up */
+.popupsuccess {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: opacity 0.5s;
+    z-index: 999;
+}
+
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+}
+
+.popup-message {
+    font-size: 8px;
+    padding: 10px;
+}
+
+.popupsuccess.fade-out {
+    animation: fadeOut 0.5s;
+    opacity: 0;
+}
+
+.checkmark-icon {
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+.Changepass_popup{
+    position: absolute;
+    top: 12%;
+    left:5%;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    z-index: 10;
+}
+.Changepass_popup .Changepass_form{
+    height: auto;  /* or whatever height you desire */
+    width: 80vw;
+    background-color: #d9e8ff !important;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+.Changepass_popup .Changepass_form .IconclosePass img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    z-index: 1;
+}
+.Changepass_popup .Changepass_form .title_changepass{
+    position: relative;
+    margin-top: 1vw;
+    margin-left: 0.3vw;
+    margin-right: 0.3vw;
+    font-size: 20px;
+    font-weight: bold;     
+}
+.Changepass_popup .Changepass_form .title_changepass::before{
+    content: '';
+    position: absolute;
+    height: 3px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(108,228,125,1) 0%, rgba(8,26,144,1) 100%);
+}
+
+.Changepass_popup .Changepass_form .input-box{
+    padding-top: 2vw;
+    margin: 0vw 1vw 0 1vw;
+  
+}
+.Changepass_popup .Changepass_form .input-box .details{
+    display: block;
+    font-size: 14px;
+    margin-bottom: 0.5vw;
+}
+.Changepass_popup .Changepass_form .input-box input{
+    height: 30px;
+    width: 100%;
+    outline: none;
+    border-radius: 0.5vw;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 12px;
+    border-bottom-width: 3px;
+    transition: all 0.3s ease;
+}
+.Changepass_popup .Changepass_form .input-box input:focus,
+.Changepass_popup .Changepass_form .input-box input:valid{
+    border-color: gray;
+}
+.Changepass_popup .Changepass_form .button{
+    height: 30px;
+    margin: 3vw 0;
+    text-align: center;
+    cursor: pointer;
+}
+.Changepass_popup .Changepass_form .input-box .password_merge {
+    position: relative;
+    /* display: inline-block;  */
+}
+.Changepass_popup .Changepass_form .input-box .password_merge .icon2{
+    position: absolute;
+    margin-top: 8px;
+    right: 1vw;
+    width: 10px;
+    color: #162938;
+    line-height: 57px;
+}
+.Changepass_popup .Changepass_form .input-box .confirmpassword_merge {
+    position: relative;
+    /* display: inline-block;  */
+}
+.Changepass_popup .Changepass_form .input-box .confirmpassword_merge .icon3{
+    position: absolute;
+    margin-top: 8px;
+    right: 1vw;
+    width: 10px;
+    color: #162938;
+    line-height: 57px;
+}
+.Changepass_popup .Changepass_form #submit{
+    height: 30px;
+    width: 40%;
+    outline: none;
+    color: #fff;
+    border: none;
+    font-size: 2vw;
+    font-weight: 500;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    background-color: gray;
+    cursor: pointer;
+}
+
+
+.Confirmpass_popup{
+    position: absolute;
+    top: 12%;
+    left:5%;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    z-index: 10;
+}
+.Confirmpass_popup .Confirmpass_form{
+    height: auto;  /* or whatever height you desire */
+    width: 80vw;
+    background-color: #d9e8ff !important;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+.Confirmpass_popup .Confirmpass_form .IconcloseConfirmPass img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 5vw;
+    height: 5vw;
+    z-index: 1;
+}
+.Confirmpass_popup .Confirmpass_form .title_confirmpass{
+    position: relative;
+    margin-top: 1vw;
+    margin-left: 0.3vw;
+    margin-right: 0.3vw;
+    font-size: 3vw;
+    font-weight: bold;     
+}
+.Confirmpass_popup .Confirmpass_form .title_confirmpass::before{
+    content: '';
+    position: absolute;
+    height: 3px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(108,228,125,1) 0%, rgba(8,26,144,1) 100%);
+}
+
+.Confirmpass_popup .Confirmpass_form .input-box{
+    padding-top: 2vw;
+    margin: 0vw 1vw 0 1vw;
+  
+}
+.Confirmpass_popup .Confirmpass_form .input-box .details{
+    display: block;
+    font-size: 2vw;
+    margin-bottom: 0.5vw;
+}
+.Confirmpass_popup .Confirmpass_form .input-box input{
+    height: 30px;
+    width: 100%;
+    outline: none;
+    border-radius: 0.5vw;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 12px;
+    border-bottom-width: 3px;
+    transition: all 0.3s ease;
+}
+.Confirmpass_popup .Confirmpass_form .input-box input:focus,
+.Confirmpass_popup .Confirmpass_form .input-box input:valid{
+    border-color: gray;
+}
+.Confirmpass_popup .Confirmpass_form .button{
+    height: 30px;
+    margin: 3vw 0;
+    text-align: center;
+    cursor: pointer;
+}
+.Confirmpass_popup .Confirmpass_form .input-box .password_merge {
+    position: relative;
+    /* display: inline-block;  */
+}
+.Confirmpass_popup .Confirmpass_form .input-box .password_merge .icon2{
+    position: absolute;
+    margin-top: 8px;
+    right: 1vw;
+    width: 10px;
+    color: #162938;
+    line-height: 57px;
+}
+.Confirmpass_popup .Confirmpass_form .input-box .confirmpassword_merge {
+    position: relative;
+    /* display: inline-block;  */
+}
+.Confirmpass_popup .Confirmpass_form .input-box .confirmpassword_merge .icon3{
+    position: absolute;
+    margin-top: 8px;
+    right: 1vw;
+    width: 10px;
+    color: #162938;
+    line-height: 57px;
+}
+.Confirmpass_popup .Confirmpass_form #submit{
+    height: 30px;
+    width: 40%;
+    outline: none;
+    color: #fff;
+    border: none;
+    font-size: 2vw;
+    font-weight: 500;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    background-color: gray;
+    cursor: pointer;
+}
+/* Ipad */
+@media only screen and (min-width: 768px){
+    /* Top Nav Start */
+    .TopNav {
+        padding: 20px;
+    }
+    .TopNav .nav-icon img {
+        height: 3vw;
+        margin-top: 0.2vw;
+    }
+    .logoname{
+        margin-top: 0.4vw;
+    }
+    .logoname img{
+        width: 5vw;
+        height: 5vw;   
+    }
+    .logoname span{
+        font-size: 2vw;
+    }
+    .Selection{
+        position: absolute;
+        right: 15vw;
+        margin-top: 1px;
+    }
+    .Selection li a{
+        font-size: 1.5vw;
+        margin-left: 2vw; 
+    }
+    /* Nav End */    
+    .container .user-details .input-box{
+        width: calc(100%/ 2 - 30px);
+    }
+    .container .user-details .input-box .details{
+        font-size: 14px;
+    }
+    .container .user-details .input-box span p{
+        height: 25px;
+        width: auto;
+        outline: none;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        padding-left: 2px;
+        font-size: 12px;
+        border-bottom-width: 3px;
+        transition: all 0.3s ease;
+    }
+    .show_Update .show_form .split_show{
+        display: block;
+        margin: 1vw 1vw 0 1vw;  
+    }
+    .show_Update .show_form .Show_left .user-details1 .input-box{
+        width: calc(100%/ 2 - 30px);
+        
+    }
+    .show_Update .show_form .Show_left .user-details1{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .show_Update .show_form .Show_left .user-details1 .input-box{
+        width: calc(100%/ 2 - 30px);
+    }
+    .show_Update .show_form .Show_left .user-details1 .input-box .details{
+        display: block;
+        font-weight: 1000;
+        font-size: 14px;
+    }
+    .show_Update .show_form .Show_left .user-details1 .input-box span p{
+        width: 100%;
+        height: 20px;
+        font-size: 10px;
+ 
+    }
+    
+    .show_Update .show_form .Show_right .user-details1 .input-box{
+        width: calc(100%/ 2 - 30px);
+        
+    }
+    .show_Update .show_form .Show_right  .user-details1 .input-box input{
+        height: 25px;
+    }
+    .show_Update .show_form .Show_right  .user-details1 .input-box .changepass{
+        height: 25px;
+    }
+    
+     /* success pop up */
+     .popup-message {
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    .Changepass_popup{
+        top:13vw;
+        left: 15vw;
+    }
+    .Changepass_popup .Changepass_form{
+        height: auto;  /* or whatever height you desire */
+        width: 60vw;
+    }
+    .Changepass_popup .Changepass_form .IconclosePass img{
+        width: 40px;
+        height: 40px;
+    }
+    .Changepass_popup .Changepass_form .title_changepass{
+        font-size: 25px;
+    }
+
+    .Changepass_popup .Changepass_form .input-box .details{
+        display: block;
+        font-size: 20px;
+        margin-bottom: 0.5vw;
+    }
+    .Changepass_popup .Changepass_form .input-box input{
+        height: 40px;
+        width: 100%;
+        font-size: 20px;
+    }
+  
+    .Changepass_popup .Changepass_form .input-box .password_merge .icon2{
+        width: 20px;
+    }
+   
+    .Changepass_popup .Changepass_form .input-box .confirmpassword_merge .icon3{
+        width: 20px;  
+    }
+    .Changepass_popup .Changepass_form .button{
+        height: 30px;
+        margin: 3vw 0;
+        text-align: center;
+    }
+    .Changepass_popup .Changepass_form #submit{
+        height: 40px;
+        font-size: 20px;    
+    }
+
+
+
+    .Confirmpass_popup{
+        top:13vw;
+        left: 15vw;
+    }
+    .Confirmpass_popup .Confirmpass_form{
+        height: auto;  /* or whatever height you desire */
+        width: 60vw;
+    }
+    .Confirmpass_popup .Confirmpass_form .IconcloseConfirmPass img{
+        width: 40px;
+        height: 40px;
+    }
+    .Confirmpass_popup .Confirmpass_form .title_confirmpass{
+        font-size: 25px;
+    }
+
+    .Confirmpass_popup .Confirmpass_form .input-box .details{
+        display: block;
+        font-size: 1.4vw;
+        margin-bottom: 0.5vw;
+    }
+    .Confirmpass_popup .Confirmpass_form .input-box input{
+        height: 40px;
+        width: 100%;
+        font-size: 20px;
+    }
+  
+    .Confirmpass_popup .Confirmpass_form .input-box .password_merge .icon2{
+        width: 20px;
+    }
+   
+    .Confirmpass_popup .Confirmpass_form .input-box .confirmpassword_merge .icon3{
+        width: 20px;  
+    }
+    .Confirmpass_popup .Confirmpass_form .button{
+        height: 30px;
+        margin: 3vw 0;
+        text-align: center;
+    }
+    .Confirmpass_popup .Confirmpass_form #submit{
+        height: 40px;
+        font-size: 20px;    
+    }
+}
+/* Desktop */
+@media only screen and (min-width: 1000px){
+    /* Top Nav Start */
+    .TopNav {
+        padding: 25px;
+    }
+    .TopNav .nav-icon img {
+        height: 2vw;
+        margin-top: 0.2vw;
+        margin-left: 1vw;
+    }
+    .logoname{
+        margin-top: 0.1vw;
+    }
+    .logoname img{
+        width: 3vw;
+        height: 3vw;   
+    }
+    .logoname span{
+        font-size: 1.4vw;
+    }
+    .Selection{
+        position: absolute;
+        right: 6vw;
+        margin-top: 1px;
+    }
+    .Selection li a{
+        font-size: 1vw;
+        margin-left: 2vw; 
+    }
+    /* Nav End */
+    .container{
+        position: absolute;
+        top: 6vw;
+        left: 10vw;
+        right: 20vw;
+        max-width: 80vw;
+        width: 100%;
+        border-radius: 6px;
+        padding: 30px;
+        background-color:whitesmoke;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+   .container .backbtn input{
+       height: 30px;
+       width:80px;
+       font-size: 10px;
+   }
+    .container .title{
+        font-size: 30px;
+    }
+    
+    .container .user-details{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .user-details .input-box{
+        width: calc(100%/ 2 - 30px);
+    }
+    .user-details .input-box .details{
+        display: block;
+        font-weight: 1000;
+    }
+    .user-details .input-box span p{
+        /* height: 37px; */
+        width: 100%;
+        outline: none;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        padding-left: 15px;
+        font-size: 14px;
+        border-bottom-width: 3px;
+        transition: all 0.3s ease;
+    }
+    
+    .button{
+        height: 45px;
+        margin: 30px 0;
+        text-align: center;
+    }
+    .button input{
+        height: 100%;
+        width: 30%;
+        outline: none;
+        color: #fff;
+        border: none;
+        font-size: 18px;
+        font-weight: 500;
+        border-radius: 5px;
+        letter-spacing: 1px;
+        background-color: gray;
+    }
+
+    .show_Update{
+        position: absolute;
+        top: 60px;
+        left: 5vw;
+        justify-content: center;
+        align-items: center;
+        display: none;
+        z-index: 3;
+    }
+    .show_Update .show_form .Iconclose img{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 45px;
+        height: 45px;
+        z-index: 1;
+    }
+    
+    .show_Update .show_form .split_show{
+        display: flex;
+        margin: 1vw 1vw 0 1vw;  
+    }
+    .show_Update .show_form .Show_left .user-details1{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .show_Update .show_form .Show_left .user-details1 .input-box{
+        width: calc(100%/ 2 - 30px);
+    }
+    .show_Update .show_form .Show_left .user-details1 .input-box .details{
+        display: block;
+        font-weight: 1000;
+        font-size: 14px;
+    }
+    .show_Update .show_form .Show_left .user-details1 .input-box span p{
+        width: 100%;
+        height: 30px;
+        font-size: 1vw;
+ 
+    }
+    .show_Update .show_form .Show_right .user-details1 .input-box{
+        width: calc(100%/ 2 - 30px);
+        
+    }
+    .show_Update .show_form .Show_right  .user-details1 .input-box input{
+        height: 37px;
+        width: 100%;
+        font-size: 14px;
+    }
+    .show_Update .show_form .Show_right  .user-details1 .input-box .changepass{
+        height: 37px;
+        width: 100%;
+        font-size: 14px;
+    }
+    .show_Update .show_form .Show_right .user-details1 .input-box .password_merge {
+        position: relative;
+        /* display: inline-block;  */
+    }
+    .show_Update .show_form .Show_right .user-details1 .input-box .password_merge .icon2{
+        position: absolute;
+        margin-top: 8px;
+        right: 1vw;
+        width: 20px;
+    }
+    .show_Update .show_form .Show_right .user-details1 .input-box .confirmpassword_merge {
+        position: relative;
+        /* display: inline-block;  */
+    }
+    .show_Update .show_form .Show_right .user-details1 .input-box .confirmpassword_merge .icon3{
+        position: absolute;
+        margin-top: 8px;
+        right: 1vw;
+        width: 20px;
+    }
+    .show_Update .show_form  .button{
+        height: 45px;
+        margin: 30px 0;
+        text-align: center;
+    }
+    .show_Update .show_form .button input{
+        height: 100%;
+        width: 30%;
+        font-size: 18px;
+    }
+
+    .Changepass_popup{
+        position: absolute;
+        top: 2vw;
+        left: 20vw;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .Changepass_popup .Changepass_form{
+        height: auto;
+        width: 50vw;
+        background-color: aliceblue;
+        border: 2px solid rgba(255, 255, 255, .5);
+        border-radius: 20px;
+        backdrop-filter: blur(50px);
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+        position: relative;
+        overflow: hidden;
+    }
+    .Changepass_popup .Changepass_form .IconclosePass img{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 3vw;
+        height: 3vw;
+        z-index: 1;
+    }
+    .Changepass_popup .Changepass_form .title_changepass{
+        position: relative;
+        margin-top: 1vw;
+        margin-left: 0.3vw;
+        margin-right: 0.3vw;
+        font-size: 1.6vw;
+        font-weight: 500;     
+    }
+    .Changepass_popup .Changepass_form .title_changepass::before{
+        content: '';
+        position: absolute;
+        height: 3px;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background: linear-gradient(90deg, rgba(108,228,125,1) 0%, rgba(8,26,144,1) 100%);
+    }
+    
+    .Changepass_popup .Changepass_form .input-box{
+        padding-top: 2vw;
+        margin: 0vw 1vw 0 1vw;
+      
+    }
+    .Changepass_popup .Changepass_form .input-box .details{
+        display: block;
+        font-size: 1.2vw;
+        margin-bottom: 0.5vw;
+    }
+    .Changepass_popup .Changepass_form .input-box input{
+        height: 3vw;
+        width: 100%;
+        outline: none;
+        border-radius: 0.5vw;
+        border: 1px solid #ccc;
+        padding-left: 15px;
+        font-size: 1vw;
+        border-bottom-width: 3px;
+        transition: all 0.3s ease;
+    }
+    .Changepass_popup .Changepass_form .input-box .password_merge {
+        position: relative;
+        /* display: inline-block;  */
+    }
+    .Changepass_popup .Changepass_form .input-box .password_merge .icon2{
+        position: absolute;
+        margin-top: 8px;
+        right: 1vw;
+        width: 1.4vw;
+    }
+    .Changepass_popup .Changepass_form .input-box .confirmpassword_merge {
+        position: relative;
+        /* display: inline-block;  */
+    }
+    .Changepass_popup .Changepass_form .input-box .confirmpassword_merge .icon3{
+        position: absolute;
+        margin-top: 8px;
+        right: 1vw;
+        width: 1.4vw;
+    }
+    .Changepass_popup .Changepass_form .input-box input:focus,
+    .Changepass_popup .Changepass_form .input-box input:valid{
+        border-color: gray;
+    }
+    .Changepass_popup .Changepass_form .button{
+        height: 2.5vw;
+        margin: 3vw 0;
+        text-align: center;
+    }
+    .Changepass_popup .Changepass_form #submit{
+        height: 100%;
+        width: 40%;
+        outline: none;
+        color: #fff;
+        border: none;
+        font-size: 1vw;
+        font-weight: 500;
+        border-radius: 5px;
+        letter-spacing: 1px;
+        background-color: gray;
+        
+    }
+
+
+    .Confirmpass_popup{
+        position: absolute;
+        top: 4vw;
+        left: 20vw;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .Confirmpass_popup .Confirmpass_form{
+        height: auto;
+        width: 50vw;
+        background-color: aliceblue;
+        border: 2px solid rgba(255, 255, 255, .5);
+        border-radius: 20px;
+        backdrop-filter: blur(50px);
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+        position: relative;
+        overflow: hidden;
+    }
+    .Confirmpass_popup .Confirmpass_form .IconcloseConfirmPass img{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 3vw;
+        height: 3vw;
+        z-index: 1;
+    }
+    .Confirmpass_popup .Confirmpass_form .title_confirmpass{
+        position: relative;
+        margin-top: 1vw;
+        margin-left: 0.3vw;
+        margin-right: 0.3vw;
+        font-size: 1.6vw;
+        font-weight: 500;     
+    }
+    .Confirmpass_popup .Confirmpass_form .title_confirmpass::before{
+        content: '';
+        position: absolute;
+        height: 3px;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background: linear-gradient(90deg, rgba(108,228,125,1) 0%, rgba(8,26,144,1) 100%);
+    }
+    
+    .Confirmpass_popup .Confirmpass_form .input-box{
+        padding-top: 2vw;
+        margin: 0vw 1vw 0 1vw;
+      
+    }
+    .Confirmpass_popup .Confirmpass_form .input-box .details{
+        display: block;
+        font-size: 1.2vw;
+        margin-bottom: 0.5vw;
+    }
+    .Confirmpass_popup .Confirmpass_form .input-box input{
+        height: 3vw;
+        width: 100%;
+        outline: none;
+        border-radius: 0.5vw;
+        border: 1px solid #ccc;
+        padding-left: 15px;
+        font-size: 1vw;
+        border-bottom-width: 3px;
+        transition: all 0.3s ease;
+    }
+    .Confirmpass_popup .Confirmpass_form .input-box .password_merge {
+        position: relative;
+        /* display: inline-block;  */
+    }
+    .Confirmpass_popup .Confirmpass_form .input-box .password_merge .icon2{
+        position: absolute;
+        margin-top: 8px;
+        right: 1vw;
+        width: 1.4vw;
+    }
+    
+    .Confirmpass_popup .Confirmpass_form .input-box input:focus,
+    .Confirmpass_popup .Confirmpass_form .input-box input:valid{
+        border-color: gray;
+    }
+    .Confirmpass_popup .Confirmpass_form .button{
+        height: 2.5vw;
+        margin: 3vw 0;
+        text-align: center;
+    }
+    .Confirmpass_popup .Confirmpass_form #submit{
+        height: 100%;
+        width: 40%;
+        outline: none;
+        color: #fff;
+        border: none;
+        font-size: 1vw;
+        font-weight: 500;
+        border-radius: 5px;
+        letter-spacing: 1px;
+        background-color: gray;
+        
+    }
+}
